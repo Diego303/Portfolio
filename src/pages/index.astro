@@ -38,7 +38,7 @@ enum PageLayout {
       {
         (CV?.pageLayout === PageLayout.TwoColumn || !CV?.pageLayout) && (
           <>
-            <Projects className="print:hidden" />
+            {/* <Projects className="print:hidden" /> DEJARLO COMO ESTA SKILLS*/}
             {CV?.education && <Education className="order-first" />}
             <Skills className="print:hidden" />
           </>
