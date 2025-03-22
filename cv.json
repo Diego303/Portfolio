@@ -1,0 +1,477 @@
+{
+  "analyticsCode": "",
+  "pageLayout": "two-column",
+  "basics": {
+    "name": "Diego Alba Ruiz",
+    "label": "DevOps & AIOps Engineer",
+    "image": "/avatar.png",
+    "email": "diego303.d@gmail.com",
+    "url": "",
+    "summary": "Me apasiona la tecnologia y el mundo de la informática desde pequeño y más en concreto, el desarrollo de software. Soy un estudiante de Ingenieria Informática en la Escuela Superior de Informática en Ciudad Real, muy comprometido con el trabajo y con gran capacidad de aprendizaje. Tengo buena capacidad de adaptacion y me siento confiado a la hora de trabajar en grupo para aportar lo maximo posible a mis compañeros. Uno de mis objetivos es poder trabajar en una empresa en la que pueda desarrollar mi potencial y poder retroalimentarme de ello para crecer de una forma Profesional.",
+    "theme": "blue",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "icon": "mdi:github",
+        "username": "Diego303",
+        "url": "https://github.com/Diego303"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Escuela Superior de Informática, Ciudad Real",
+      "url": "https://esi.uclm.es/",
+      "area": "Grado en Ingenieria Informática",
+      "studyType": "Estudiante universitario",
+      "startDate": "2019",
+      "endDate": "2023"
+    },
+    {
+      "institution": "IES Maestre de Calatrava, Ciudad Real",
+      "url": "https://iesmaestredecalatrava.es/",
+      "area": "Técnico superior en desarrollo de aplicaciones multiplataforma",
+      "studyType": "Estudiante",
+      "startDate": "2017",
+      "endDate": "2019"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Terraform Associate (003)",
+      "date": "2024",
+      "url": "https://developer.hashicorp.com/certifications/infrastructure-automation",
+      "issuer": "HashiCorp"
+    },
+    {
+      "name": "New Relic Full Stack Observability Practitioner Certification",
+      "date": "2024",
+      "url": "",
+      "issuer": "New Relic"
+    },
+    {
+      "name": "Azure AI Fundamentals",
+      "date": "2023",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification",
+      "issuer": "Microsoft"
+    }
+  ],
+  "work": [
+    {
+      "name": "NTT Data",
+      "position": "IST - Process & System Technician",
+      "location_type": "Híbrido",
+      "url": "https://www.linkedin.com/company/ntt-data-europe-latam",
+      "startDate": "Septiembre 2023",
+      "endDate": null,
+      "summary": "Ingeniero en DevOps y AIOps.",
+      "responsibilities": [
+        "Trabajo en equipo empresarial.",
+        "Seguir metodología de trabajo ágil.",
+        "Desarrollo de automatizaciones.",
+        "Despleigue, gestión y mantenimiento de infraestructura de producción y preproducción usando IaC.",
+        "Desarrollo e integración de soluciones con inteligencia artificial.",
+        "Desarrollo de modelos de inteligencia artificial con machine learning."
+      ],
+      "achievements": [
+        "Manejo y gestión de contenedores en entornos productivos.",
+        "Despliegue y mantenimiento de cluster de kubernetes y aplicativos.",
+        "Desarrollo de automatizaciones para procesos generales.",
+        "Manejo de herramientas de monitorización con AIOps."
+      ],
+      "skills": {
+        "Python": "simple-icons:python",
+        "Kubernetes": "simple-icons:kubernetes",
+        "Docker": "simple-icons:docker",
+        "Terraform": "simple-icons:terraform",
+        "Tensorflow": "simple-icons:tensorflow",
+        "Ollama": "simple-icons:ollama",
+        "Rundeck": "simple-icons:rundeck",
+        "Apache Airflow": "simple-icons:apacheairflow",
+        "Ansible": "simple-icons:ansible",
+        "Newrelic": "simple-icons:newrelic",
+        "Azure": "simple-icons:microsoft",
+        "Nginx": "simple-icons:nginx",
+        "Linux": "simple-icons:linux",
+        "API Rest": "simple-icons:flask",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Git": "mdi:git"
+      }
+    },
+    {
+      "name": "NTT Data",
+      "position": "Becario",
+      "location_type": "Híbrido",
+      "url": "https://www.linkedin.com/company/ntt-data-europe-latam",
+      "startDate": "Marzo 2023",
+      "endDate": "Julio 2023",
+      "summary": "Prácticas de universidad de grado en ingenieria informática y desarrollo de TFG Full-stack.",
+      "responsibilities": [
+        "Trabajo en equipo empresarial.",
+        "Seguir metodología de trabajo ágil.",
+        "Desarrollo de automatizaciones.",
+        "Gestión de infraestructura usando IaC."
+      ],
+      "achievements": [
+        "Planificación, desarrollo e implantación de TFG Full-stack con microservicios.",
+        "Aprendido el manejo y gestión de contenedores en entornos productivos.",
+        "Aprendido el desarrollo de automatizaciones para procesos generales."
+      ],
+      "skills": {
+        "Python": "simple-icons:python",
+        "Kubernetes": "simple-icons:kubernetes",
+        "Docker": "simple-icons:docker",
+        "Terraform": "simple-icons:terraform",
+        "Rundeck": "simple-icons:rundeck",
+        "Ansible": "simple-icons:ansible",
+        "Pulumi": "simple-icons:pulumi",
+        "React": "simple-icons:react",
+        "Javascript": "simple-icons:javascript",
+        "Azure": "simple-icons:microsoft",
+        "Nginx": "simple-icons:nginx",
+        "Linux": "simple-icons:linux",
+        "API Rest": "simple-icons:flask",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Git": "mdi:git"
+      }
+    },
+    {
+      "name": "Cooperativa San Isidro Labrado, Las Labores",
+      "position": "Encargado Informático",
+      "location_type": "Presencial",
+      "url": "",
+      "startDate": "Septiembre 2022",
+      "endDate": "Septiembre 2022",
+      "summary": "Encargado del sistema para obtener el grado de alcohol la uva y del sistema informático de tickets.",
+      "responsibilities": [
+        "Obtener grado de alcohol de la uva.",
+        "Procesar tickets de referencia a la cosecha de uva con sistema informático."
+      ]
+    },
+    {
+      "name": "Telefónica",
+      "position": "Becario",
+      "location_type": "Presencial",
+      "url": "https://www.telefonica.com/es/",
+      "startDate": "Abril 2019",
+      "endDate": "Junio 2019",
+      "summary": "Prácticas de técnico superior en desarrollo de aplicaciones multiplataforna.",
+      "responsibilities": [
+        "Trabajo en equipo.",
+        "Desarrollo de herramientas web internas.",
+        "Integración de herramientas web internas."
+      ],
+      "achievements": [
+        "Diseño de herramientas web.",
+        "Desarrollo de herramientas web internas."
+      ],
+      "skills": {
+        "HTML": "simple-icons:html5",
+        "CSS": "ri:css3-fill",
+        "JavaScript": "simple-icons:javascript",
+        "PHP": "simple-icons:php",
+        "Git": "mdi:git"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "icon": "simple-icons:python",
+      "level": "",
+      "keywords": [
+        "Virtual Environments",
+        "Backend",
+        "Development"
+      ]
+    },
+    {
+      "name": "Kubernetes",
+      "icon": "simple-icons:kubernetes",
+      "level": "",
+      "keywords": [
+        "Containers",
+        "Backend",
+        "Microservices"
+      ]
+    },
+    {
+      "name": "Terraform",
+      "icon": "simple-icons:terraform",
+      "level": "",
+      "keywords": [
+        "IaC",
+        "Infraestructure",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Docker",
+      "icon": "mdi:docker",
+      "level": "",
+      "keywords": [
+        "Virtual Environments",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Tensorflow",
+      "icon": "simple-icons:tensorflow",
+      "level": "",
+      "keywords": [
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Ollama",
+      "icon": "simple-icons:ollama",
+      "level": "",
+      "keywords": [
+        "AI",
+        "Machine Learning",
+        "GenAI",
+        "AIOps"
+      ]
+    },
+    {
+      "name": "Rundeck",
+      "icon": "simple-icons:rundeck",
+      "level": "",
+      "keywords": [
+        "DevOps",
+        "Jobs"
+      ]
+    },
+    {
+      "name": "Ansible",
+      "icon": "simple-icons:ansible",
+      "level": "",
+      "keywords": [
+        "DevOps"
+      ]
+    },
+    {
+      "name": "New Relic",
+      "icon": "simple-icons:newrelic",
+      "level": "",
+      "keywords": [
+        "Monitoring"
+      ]
+    },
+    {
+      "name": "Azure",
+      "icon": "simple-icons:microsoft",
+      "level": "",
+      "keywords": [
+        "Azure",
+        "Cloud",
+        "Microsoft"
+      ]
+    },
+    {
+      "name": "API Rest",
+      "icon": "simple-icons:flask",
+      "level": "",
+      "keywords": [
+        "API",
+        "API Rest",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Apache Airflow",
+      "icon": "simple-icons:apacheairflow",
+      "level": "",
+      "keywords": [
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Java",
+      "icon": "simple-icons:coffeescript",
+      "level": "",
+      "keywords": [
+        "Backend",
+        "Development"
+      ]
+    },
+    {
+      "name": "HTML",
+      "icon": "simple-icons:html5",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "icon": "ri:css3-fill",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Responsive Design"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "icon": "simple-icons:javascript",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Git",
+      "icon": "mdi:git",
+      "level": "",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "icon": "mdi:github",
+      "level": "",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code",
+        "Git"
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "simple-icons:postgresql",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "icon": "mdi:react",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
+    },
+    {
+      "name": "Vite",
+      "icon": "simple-icons:vite",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Build Tool"
+      ]
+    },
+    {
+      "name": "Astro",
+      "icon": "simple-icons:astro",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "Nginx",
+      "icon": "simple-icons:nginx",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "Web Server"
+      ]
+    },
+    {
+      "name": "Bash",
+      "icon": "simple-icons:gnubash",
+      "level": "",
+      "keywords": [
+        "Scripting",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Linux",
+      "icon": "simple-icons:linux",
+      "level": "",
+      "keywords": [
+        "OS",
+        "Scripting",
+        "Automation"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "English",
+      "fluency": "Básico"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Technology",
+      "keywords": [
+        "AI"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Cloudflare Vmail",
+      "image": {
+        "url": "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
+        "position": "container",
+        "dark": "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp"
+      },
+      "isActive": true,
+      "description": "An open source temporary email tool, fully on Cloudflare. Inspired by oiov/vmail",
+      "highlights": [
+        "🎯 Privacy-friendly, no registration required, out-of-the-box",
+        "✨ Support saving passwords and retrieving email addresses",
+        "😄 Support multiple domain name suffixes",
+        "🚀 100% open source, fully based on Cloudflare."
+      ],
+      "url": "https://what-the-fuck.sbs",
+      "github": "https://github.com/MiraHikari/cloudflare-vmail"
+    },
+    {
+      "name": "Riddle Town Hunt 2",
+      "image": {
+        "url": "https://rth2-webstatic.gbclstudio.cn/wp-content/uploads/2024/02/1707656250-76b2b0d2c94824e89a2b8b2c7d1c6afe.png",
+        "position": "background"
+      },
+      "isActive": false,
+      "description": "Public decryption activity in the form of Puzzle Hunt.",
+      "highlights": [
+        "👌 More than 1000 people participated, system runs normally",
+        "😮‍ Use headless CMS: WordPress to storage and manage contents, dynamically render page",
+        "😊 Windows-like interface",
+        "💕 Based on Astro"
+      ],
+      "url": "https://rth2.gcxstudio.cn/"
+    }
+  ]
+}
