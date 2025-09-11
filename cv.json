@@ -7,7 +7,7 @@
     "image": "/Portfolio/avatar.png",
     "email": "diego303.d@gmail.com",
     "url": "",
-    "summary": "Me apasionan la tecnología y el mundo de la informática desde pequeño, y más en concreto, el desarrollo de software. He sido estudiante de Ingenieria Informática en la Escuela Superior de Informática en Ciudad Real, soy muy comprometido con el trabajo y tengo gran capacidad de aprendizaje. Tengo buena capacidad de adaptación, y me siento confiado a la hora de trabajar en grupo para aportar lo máximo posible tanto a mis compañeros como al proyecto. Mi objetivo es desarrollar mi potencial, así como retroalimentarme de ello para crecer de una forma profesional y personal.",
+    "summary": "Me apasionan la tecnología y el mundo de la informática desde pequeño y, más en concreto, el desarrollo de software. He sido estudiante de Ingeniería Informática en la Escuela Superior de Informática de Ciudad Real. Soy muy comprometido con el trabajo y tengo gran capacidad de aprendizaje. Poseo buena capacidad de adaptación y me siento confiado a la hora de trabajar en grupo para aportar lo máximo posible, tanto a mis compañeros como al proyecto. Mi objetivo es desarrollar mi potencial, así como retroalimentarme de ello para crecer de una forma profesional y personal.",
     "theme": "blue",
     "profiles": [
       {
@@ -37,6 +37,12 @@
     }
   ],
   "certificates": [
+    {
+      "name": "CKAD: Certified Kubernetes Application Developer",
+      "date": "2025",
+      "url": "https://www.credly.com/badges/66a484b4-19a4-4549-9f5a-a40da990f20b/linked_in?t=t1yl7w",
+      "issuer": "The Linux Foundation"
+    },
     {
       "name": "Terraform Associate (003)",
       "date": "2024",
@@ -69,13 +75,13 @@
         "Trabajo en equipo empresarial.",
         "Seguir metodología de trabajo ágil.",
         "Desarrollo de automatizaciones.",
-        "Despleigue, gestión y mantenimiento de infraestructura de producción y preproducción usando IaC.",
+        "Despliegue, gestión y mantenimiento de infraestructura de producción y preproducción usando IaC.",
         "Desarrollo e integración de soluciones con inteligencia artificial.",
         "Desarrollo de modelos de inteligencia artificial con machine learning."
       ],
       "achievements": [
         "Manejo y gestión de contenedores en entornos productivos.",
-        "Despliegue y mantenimiento de cluster de kubernetes y aplicativos.",
+        "Despliegue y mantenimiento de clúster de Kubernetes y aplicativos.",
         "Desarrollo de automatizaciones para procesos generales.",
         "Manejo de herramientas de monitorización con AIOps."
       ],
@@ -105,7 +111,7 @@
       "url": "https://www.linkedin.com/company/ntt-data-europe-latam",
       "startDate": "Marzo 2023",
       "endDate": "Julio 2023",
-      "summary": "Prácticas de universidad de grado en ingenieria informática y desarrollo de TFG Full-stack.",
+      "summary": "Prácticas de universidad de grado en Ingeniería Informática y desarrollo de TFG Full-stack.",
       "responsibilities": [
         "Trabajo en equipo empresarial.",
         "Seguir metodología de trabajo ágil.",
