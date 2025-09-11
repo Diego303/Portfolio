@@ -3,16 +3,13 @@ import Section from "../Section.astro";
 import { Icon } from "astro-icon/components";
 
 import { projects } from "@cv";
-import { Image } from "astro:assets";
 ---
 
-<Section className={Astro.props.className} title="Projects">
+<Section className={Astro.props.className} title="Proyectos">
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       projects.map(
-        ({ url, description, highlights, name, isActive, github, image }) => {
-          const isBackgroundImage = image && image?.position === "background";
-          const isContainerImage = image && image?.position === "container";
+        ({ url, description, highlights, name, isActive, github }) => {
           return (
             <div
               role="contentinfo"
@@ -20,23 +17,6 @@ import { Image } from "astro:assets";
                 "project-container grid-span-1 group relative flex min-h-80 flex-col overflow-hidden rounded-md bg-skin-button-muted/50 p-5 shadow-sm ring-1 ring-skin-muted",
               ]}
             >
-              {isBackgroundImage && (
-                <a data-src={image.url} data-fancybox="projects">
-                  <div
-                    class:list={[
-                      "absolute inset-0 transform bg-cover bg-center bg-no-repeat opacity-30 blur-sm grayscale transition-all duration-300",
-                      image.dark ? "dark:hidden" : "",
-                    ]}
-                    style={{ backgroundImage: `url(${image.url})` }}
-                  />
-                  {image.dark && (
-                    <div
-                      class="absolute inset-0 hidden transform bg-cover bg-center bg-no-repeat opacity-30 blur-sm grayscale transition-all duration-300 dark:block"
-                      style={{ backgroundImage: `url(${image.dark})` }}
-                    />
-                  )}
-                </a>
-              )}
               <div
                 class={`relative z-10 flex items-center justify-between space-x-[10px]`}
               >
@@ -82,34 +62,6 @@ import { Image } from "astro:assets";
                   return <li>{highlight}</li>;
                 })}
               </ul>
-              {isContainerImage && (
-                <a data-src={image.url} data-fancybox="projects">
-                  <Image
-                    src={image.url}
-                    alt=""
-                    width={800}
-                    height={1080}
-                    class:list={[
-                      "mt-3 max-w-full rounded-lg",
-                      image.dark ? "dark:hidden" : "",
-                    ]}
-                  />
-                  {image.dark && (
-                    <Image
-                      src={image.dark}
-                      alt=""
-                      width={800}
-                      height={1080}
-                      class="mt-3 hidden max-w-full rounded-lg dark:block"
-                    />
-                  )}
-                </a>
-              )}
-              {isBackgroundImage && (
-                <p class="absolute bottom-2 right-2 font-mono text-sm text-skin-muted">
-                  Click blank to enlarge
-                </p>
-              )}
             </div>
           );
         },

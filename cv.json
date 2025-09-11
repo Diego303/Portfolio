@@ -446,7 +446,64 @@
   ],
   "projects": [
     {
-      "name": "Cloudflare Vmail",
+      "name": "Iceflix",
+      "isActive": true,
+      "description": "Sistema distribuido de streaming basado en microservicios",
+      "highlights": [
+        "Creado en el grado en ingeniería informática",
+        "Desarrollado con Python, ZeroC Ice y ZeroC IceStorm"
+      ],
+      "url": "https://github.com/Diego303/Iceflix",
+      "github": "https://github.com/Diego303/Iceflix"
+    },
+    {
+      "name": "Infoge",
+      "isActive": true,
+      "description": "Herramienta sobre información de localizaciones usando APIs de Mapas y de Twitter",
+      "highlights": [
+        "Creado en el grado en ingeniería informática",
+        "Desarrollado con Python, y APIs"
+      ],
+      "url": "https://github.com/Diego303/Infoge",
+      "github": "https://github.com/Diego303/Infoge"
+    },
+    {
+      "name": "Video interactivo",
+      "isActive": true,
+      "description": "Vídeo donde el usuario puede interaccionar con varios elementos",
+      "highlights": [
+        "Creado en el grado en ingeniería informática",
+        "Desarrollado con Angular"
+      ],
+      "url": "https://github.com/Diego303/Video-Interactivo",
+      "github": "https://github.com/Diego303/Video-Interactivo"
+    },
+    {
+      "name": "Shoppy",
+      "isActive": true,
+      "description": "Proyecto de tienda temática",
+      "highlights": [
+        "Creado en el grado en ingeniería informática",
+        "Desarrollado con tecnología UWP y C#"
+      ],
+      "url": "https://github.com/Diego303/Shoppy",
+      "github": "https://github.com/Diego303/Shoppy"
+    },
+    {
+      "name": "ERP",
+      "isActive": true,
+      "description": "Proyecto de planificación de recursos empresariales en C#",
+      "highlights": [
+        "Creado en el modulo técnico superior en desarrollo de aplicaciones multiplataforma",
+        "Desarrollado con C#"
+      ],
+      "url": "https://github.com/Diego303/ERP-DAM",
+      "github": "hhttps://github.com/Diego303/ERP-DAM"
+    }
+  ],
+  "projects2": [
+    {
+      "name": "Cloudflare Vmaill",
       "image": {
         "url": "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
         "position": "container",

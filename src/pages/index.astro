@@ -38,8 +38,8 @@ enum PageLayout {
       {
         (CV?.pageLayout === PageLayout.TwoColumn || !CV?.pageLayout) && (
           <>
-            {/* <Projects className="print:hidden" /> DEJARLO COMO ESTA SKILLS*/}
             {CV?.education && <Education className="order-first" />}
+            <Projects className="print:hidden" />
             <Skills className="print:hidden" />
           </>
         )
@@ -56,6 +56,7 @@ enum PageLayout {
               <Projects className="print:hidden" />
 
               {CV?.education && <Education className="order-first" />}
+              <Projects className="print:hidden" />
               <Skills className="print:hidden" />
             </div>
           </main>
@@ -139,7 +140,6 @@ enum PageLayout {
 </script>
 
 <style>
-  /* 自定义滚动条样式 */
   .scrollbar-thin::-webkit-scrollbar {
     height: 8px;
   }
