@@ -7,7 +7,7 @@
     "image": "/Portfolio/avatar.png",
     "email": "diego303.d@gmail.com",
     "url": "",
-    "summary": "Me apasionan la tecnología y el mundo de la informática desde pequeño y, más en concreto, el desarrollo de software. He sido estudiante de Ingeniería Informática en la Escuela Superior de Informática de Ciudad Real. Soy muy comprometido con el trabajo y tengo gran capacidad de aprendizaje. Poseo buena capacidad de adaptación y me siento confiado a la hora de trabajar en grupo para aportar lo máximo posible, tanto a mis compañeros como al proyecto. Mi objetivo es desarrollar mi potencial, así como retroalimentarme de ello para crecer de una forma profesional y personal.",
+    "summary": "Me apasiona la tecnología y el desarrollo de software desde muy joven. Soy graduado en Ingeniería Informática, con una gran capacidad de aprendizaje y una fuerte orientación a resultados. Me caracterizo por mi compromiso, mi adaptabilidad y mi habilidad para trabajar en equipo, aportando siempre lo mejor de mí tanto a mis compañeros como a cada proyecto. Mi objetivo es seguir desarrollando mi potencial, creciendo de manera profesional y personal mientras contribuyo a crear soluciones tecnológicas de alto impacto.",
     "theme": "blue",
     "profiles": [
       {
@@ -15,6 +15,12 @@
         "icon": "mdi:github",
         "username": "Diego303",
         "url": "https://github.com/Diego303"
+      },
+      {
+        "network": "Linkedin",
+        "icon": "mdi:linkedin",
+        "username": "Diego",
+        "url": "https://www.linkedin.com/in/diegoarinf"
       }
     ]
   },
