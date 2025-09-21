@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import About from "@/components/sections/About.astro";
 import Experience from "@/components/sections/Experience.astro";
 import Hero from "@/components/sections/Hero.astro";
+import TechExperience from "@/components/sections/TechExperience.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
@@ -39,6 +40,7 @@ enum PageLayout {
         (CV?.pageLayout === PageLayout.TwoColumn || !CV?.pageLayout) && (
           <>
             {CV?.education && <Education className="order-first" />}
+            <TechExperience className="print:hidden" />
             <Projects className="print:hidden" />
             <Skills className="print:hidden" />
           </>
@@ -53,9 +55,11 @@ enum PageLayout {
         {CV?.pageLayout === PageLayout.SingleColumn && (
           <main class="relative grid max-w-[82rem] gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6">
             <div class="slide-enter-content space-y-6 md:col-span-6">
+              <TechExperience className="print:hidden" />
               <Projects className="print:hidden" />
 
               {CV?.education && <Education className="order-first" />}
+              <TechExperience className="print:hidden" />
               <Projects className="print:hidden" />
               <Skills className="print:hidden" />
             </div>
@@ -69,6 +73,7 @@ enum PageLayout {
               class="slide-enter-content scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 mx-auto md:col-span-6 md:overflow-x-auto md:overflow-y-auto print:max-w-none print:grid-cols-1 print:gap-6"
             >
               <div class="flex space-x-0 pb-4 max-md:gap-4 max-sm:flex-col max-sm:space-y-4 md:px-4">
+                <TechExperience className="flex-shrink-0 w-full print:hidden border-skin-hue md:border-solid md:border md:p-4" />
                 <Projects className="flex-shrink-0 w-full print:hidden border-skin-hue md:border-solid md:border md:p-4" />
                 {CV?.education && (
                   <Education className="flex-shrink-0 w-full md:w-1/3 print:order-first border-skin-hue md:border-solid md:border md:p-4" />

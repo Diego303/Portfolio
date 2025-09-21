@@ -450,6 +450,65 @@
       ]
     }
   ],
+  "techexp": [
+    {
+      "name": "DevOps",
+      "icon": "mdi:all-inclusive",
+      "isActive": true,
+      "highlights": [
+        "Despliegue de plataformas para cluster de kubernetes en entornos productivos.",
+        "Implementación de pipelines de CI/CD.",
+        "Automatización de despliegues y gestión de infraestructuras con Terraform y Ansible.",
+        "Manejo y gestión de imagenes y contenedores en entornos productivos.",
+        "Manejo y gestión de aplicaciones en contenedores productivos."
+      ]
+    },
+    {
+      "name": "Inteligencia Artificial",
+      "icon": "mdi:brain",
+      "isActive": true,
+      "highlights": [
+        "Diseño y desarrollo de agentes de inteligencia artificial con Langchain.",
+        "Diseño y desarrollo de modelos de aprendizaje automático.",
+        "Desarrollo de soluciones con Python y librerías de IA avanzadas.",
+        "Integración de tecnologías de inteligencia artificial para soluciones avanzadas."
+      ]
+    },
+    {
+      "name": "Monitorización y observabilidad",
+      "icon": "mdi:eye-outline",
+      "isActive": true,
+      "highlights": [
+        "Implementación de sistemas de monitorización de aplicaciones y servicios en entornos Linux y cluster de Kubernetes con New Relic.",
+        "Experiencia en herramientas de logging, métricas y trazabilidad para garantizar la estabilidad del sistema con New Relic.",
+        "Automatización de alertas y dashboards usando New Relic.",
+        "Implementación de sistemas de monitorización en aplicaciones de inteligencia artificial."
+      ]
+    },
+    {
+      "name": "Desarrollo de software backend",
+      "icon": "mdi:script-text-outline",
+      "isActive": true,
+      "highlights": [
+        "Diseño y desarrollo de APIs y servicios escalables.",
+        "Gestión eficiente de bases de datos y lógica de negocio.",
+        "Diseño y desarrollo de automatizaciones en python.",
+        "Diseño y desarrollo de microservicios en python.",
+        "Programación avanzada con Python.",
+        "Programación base en Java y C#."
+      ]
+    },
+    {
+      "name": "Desarrollo de software frontend",
+      "icon": "mdi:application-outline",
+      "isActive": true,
+      "highlights": [
+        "Uso de tecnologías básicas como HTML, CSS y Javascript.",
+        "Uso de frameworks modernos como React y Astro.",
+        "Integración con APIs backend y optimización de la experiencia de usuario."
+      ]
+    }
+  ],
   "projects": [
     {
       "name": "Iceflix",
@@ -505,42 +564,6 @@
       ],
       "url": "https://github.com/Diego303/ERP-DAM",
       "github": "hhttps://github.com/Diego303/ERP-DAM"
-    }
-  ],
-  "projects2": [
-    {
-      "name": "Cloudflare Vmaill",
-      "image": {
-        "url": "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
-        "position": "container",
-        "dark": "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp"
-      },
-      "isActive": true,
-      "description": "An open source temporary email tool, fully on Cloudflare. Inspired by oiov/vmail",
-      "highlights": [
-        "🎯 Privacy-friendly, no registration required, out-of-the-box",
-        "✨ Support saving passwords and retrieving email addresses",
-        "😄 Support multiple domain name suffixes",
-        "🚀 100% open source, fully based on Cloudflare."
-      ],
-      "url": "https://what-the-fuck.sbs",
-      "github": "https://github.com/MiraHikari/cloudflare-vmail"
-    },
-    {
-      "name": "Riddle Town Hunt 2",
-      "image": {
-        "url": "https://rth2-webstatic.gbclstudio.cn/wp-content/uploads/2024/02/1707656250-76b2b0d2c94824e89a2b8b2c7d1c6afe.png",
-        "position": "background"
-      },
-      "isActive": false,
-      "description": "Public decryption activity in the form of Puzzle Hunt.",
-      "highlights": [
-        "👌 More than 1000 people participated, system runs normally",
-        "😮‍ Use headless CMS: WordPress to storage and manage contents, dynamically render page",
-        "😊 Windows-like interface",
-        "💕 Based on Astro"
-      ],
-      "url": "https://rth2.gcxstudio.cn/"
     }
   ]
 }

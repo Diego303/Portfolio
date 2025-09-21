@@ -1,0 +1,113 @@
+---
+// src/components/sections/Projects.astro
+import Section from "../Section.astro";
+import { Icon } from "astro-icon/components";
+import { techexp } from "@cv";
+---
+
+<Section className={Astro.props.className} title="Experiencia en tecnología">
+  <div class="relative py-6">
+    <!-- controles -->
+    <div class="absolute left-2 top-1/2 -translate-y-1/2 z-20">
+      <button id="projects-prev" aria-label="Anterior" class="p-2 rounded-full shadow-md bg-skin-button-muted/80 hover:bg-skin-button-accent">
+        <Icon name="mdi:chevron-left" width={20} height={20} />
+      </button>
+    </div>
+    <div class="absolute right-2 top-1/2 -translate-y-1/2 z-20">
+      <button id="projects-next" aria-label="Siguiente" class="p-2 rounded-full shadow-md bg-skin-button-muted/80 hover:bg-skin-button-accent">
+        <Icon name="mdi:chevron-right" width={20} height={20} />
+      </button>
+    </div>
+
+    <!-- carrusel centrado -->
+    <div class="relative overflow-hidden py-6">
+      <div id="projects-track" class="flex transition-transform duration-500 ease-in-out gap-4">
+        {
+          techexp.map(({ highlights, name, isActive, icon }, idx) => (
+            <article
+              class="flex-shrink-0 w-full max-w-md mx-auto p-5 rounded-md shadow-md bg-skin-button-muted/50 ring-1 ring-skin-muted transition-opacity duration-500 transform scale-95 opacity-50 my-4"
+              data-index={idx}
+            >
+              <div class="relative z-10 flex items-center justify-between space-x-[10px]">
+                <div class="flex items-center gap-2">
+                  <Icon name={icon} class="size-4" />
+                  <div class="flex items-center gap-[6px]">
+                    {isActive ? (
+                      <a
+                        class="group flex items-center gap-[6px] text-lg decoration-dotted underline-offset-[5px] hover:text-skin-hue hover:underline"
+                        title={`Ver ${name}`}
+                        target="_blank"
+                      >
+                        {name}
+                      </a>
+                    ) : (
+                      <span>{name}</span>
+                    )}
+                  </div>
+                </div>
+
+              </div>
+
+              <ul class="relative z-10 mt-1 text-sm text-skin-base ml-4 list-disc space-y-1">
+                {highlights.map((h) => <li class="text-skin-muted">{h}</li>)}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Section>
+
+<script type="module">
+if (typeof window !== "undefined") {
+  const track = document.getElementById('projects-track');
+  const btnPrev = document.getElementById('projects-prev');
+  const btnNext = document.getElementById('projects-next');
+  const cards = track.querySelectorAll('article');
+  let currentIndex = 0;
+
+  const updateCards = () => {
+    cards.forEach((card, idx) => {
+      if (idx === currentIndex) {
+        card.classList.add('scale-100', 'opacity-100', 'z-10');
+        card.classList.remove('scale-95', 'opacity-50', 'z-0');
+      } else {
+        card.classList.remove('scale-100', 'opacity-100', 'z-10');
+        card.classList.add('scale-95', 'opacity-50', 'z-0');
+      }
+    });
+    const offset = cards[currentIndex].offsetLeft - (track.offsetWidth - cards[currentIndex].offsetWidth) / 2;
+    track.style.transform = `translateX(${-offset}px)`;
+    btnPrev.disabled = currentIndex === 0;
+    btnNext.disabled = currentIndex === cards.length - 1;
+  };
+
+  btnPrev.addEventListener('click', () => {
+    if (currentIndex > 0) currentIndex--;
+    updateCards();
+  });
+  btnNext.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) currentIndex++;
+    updateCards();
+  });
+
+  // clic en tarjeta cambia al siguiente
+  cards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      if (currentIndex < cards.length - 1) currentIndex++;
+      else currentIndex = 0;
+      updateCards();
+    });
+  });
+
+  window.addEventListener('resize', updateCards);
+  window.addEventListener('load', updateCards);
+  updateCards();
+}
+</script>
+
+<style is:global>
+#projects-track { display: flex; }
+article { cursor: pointer; }
+</style>
