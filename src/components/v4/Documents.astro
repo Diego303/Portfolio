@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import { cv } from "@/lib/cv";
+import { docDate, url } from "@/lib/format";
+import { SECTIONS } from "@/data/site";
+
+// Las tarjetas salen de los posts de src/content/blog, del más antiguo al más reciente.
+const posts = (await getCollection("blog")).sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+---
+
+<section class="block" id="documentos">
+  <div class="wrap">
+    <div class="arch-head">
+      <h2>Documentos<i></i></h2>
+      <p>{SECTIONS.documentos}</p>
+    </div>
+    <div class="docs">{
+      posts.map(({ id, data }) => (
+        <article class="doc">
+          <div class="doc-cover"><img src={url(data.cover)} alt="" loading="lazy" width="633" height="318" /><span class="doc-code">{data.code}</span></div>
+          <div class="doc-body">
+            <p class="doc-meta"><span>{docDate(data.date)}</span><span>{data.readingTime} min de lectura</span></p>
+            <h3><a href={url(`blog/${id}.html`)} target="_blank" rel="noopener">{data.title}</a></h3>
+            <p class="doc-desc">{data.description}</p>
+            <div class="ptags">{data.tags.map((t) => <i>{t}</i>)}</div>
+          </div>
+        </article>
+      ))
+    }</div>
+    <p class="docs-more"><a class="link" href={`${cv.basics.url}#documentos`} target="_blank" rel="noopener">Ver todos los documentos</a></p>
+  </div>
+</section>

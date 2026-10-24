@@ -1,0 +1,15 @@
+---
+import { PALETTES } from "@/data/site";
+---
+
+<div class="pal" id="pal">
+  <button class="pal-btn" id="pal-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="pal-pop" aria-label="Cambiar paleta de colores" title="Paleta"><span class="sw"></span></button>
+  <div class="pal-pop" id="pal-pop" role="radiogroup" aria-label="Paleta de colores">
+    <p>Paleta</p>
+    {
+      PALETTES.map((p, i) => (
+        <button class="pal-opt" type="button" role="radio" data-p={p.id} aria-checked={i === 0 ? "true" : "false"}><span class="dots">{p.dots.map((c) => <i style={`background:${c}`} />)}</span><span>{p.name}<small>{p.desc}</small></span><span class="chk" /></button>
+      ))
+    }
+  </div>
+</div>

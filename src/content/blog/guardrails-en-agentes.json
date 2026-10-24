@@ -1,0 +1,30 @@
+{
+  "code": "DOC-003",
+  "title": "Guardrails: lo que no debe entrar ni salir de un agente",
+  "description": "Validación de entradas y salidas, prompt injection, datos sensibles y políticas de empresa: qué controlan los guardrails y dónde viven en la plataforma.",
+  "date": "2026-07-07",
+  "readingTime": 5,
+  "tags": ["Seguridad", "Guardrails"],
+  "cover": "blog/guardrails-en-agentes.webp",
+  "body": [
+    { "type": "p", "text": "Un agente corporativo lee texto que no controla y puede actuar sobre sistemas reales. Los guardrails son las piezas de la plataforma que deciden qué puede entrar hasta el agente y qué puede salir de él." },
+    { "type": "h2", "text": "Qué controlan" },
+    { "type": "ul", "items": [
+      "Validación de entradas: que la petición tenga sentido para el caso de uso antes de gastar una llamada a modelo.",
+      "Prompt injection: instrucciones escondidas en la petición o en los documentos que intentan cambiar el comportamiento del agente.",
+      "Datos sensibles: información que no debe llegar al modelo o que no debe aparecer en la respuesta.",
+      "Políticas de la empresa: lo que el cliente permite y lo que no, aplicado de forma consistente."
+    ] },
+    { "type": "h2", "text": "Dónde viven" },
+    { "type": "p", "text": "En la plataforma, los guardrails son servicios propios, cada uno en su pod, y están en los dos extremos del recorrido:" },
+    { "type": "ul", "items": [
+      "A la entrada, entre la API y el orquestador: nada llega a los agentes sin pasar por ellos.",
+      "A la salida, entre el orquestador y la API: nada vuelve al usuario sin pasar por ellos."
+    ] },
+    { "type": "p", "text": "Ponerlos fuera de los agentes tiene una ventaja: un agente nuevo hereda las mismas garantías sin tener que reimplementarlas." },
+    { "type": "h2", "text": "No son la única defensa" },
+    { "type": "p", "text": "Los guardrails funcionan mejor cuando el resto de la plataforma también limita. Las herramientas MCP exponen solo las operaciones necesarias y con permisos acotados, y todas las llamadas a modelos pasan por el LLM gateway. Si algo se escapa de un guardrail, lo que el agente puede hacer sigue estando acotado." },
+    { "type": "h2", "text": "Trazables" },
+    { "type": "p", "text": "Cada decisión de un guardrail queda en la traza de OpenTelemetry de la petición. Así se puede revisar por qué se bloqueó algo y ajustar las reglas con datos, no a ciegas." }
+  ]
+}

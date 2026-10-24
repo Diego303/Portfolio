@@ -1,0 +1,63 @@
+---
+import { SECTIONS } from "@/data/site";
+// El diagrama es el SVG de la referencia V4, sin cambios.
+---
+
+<section class="block" id="arquitectura">
+  <div class="wrap">
+    <div class="arch-head">
+      <h2>Arquitectura<i></i></h2>
+      <p>{SECTIONS.arquitectura}</p>
+    </div>
+    <figure class="arch">
+      <div class="arch-scroll" tabindex="0" aria-label="Diagrama de la plataforma; desliza para verlo entero">
+<svg viewBox="0 0 1000 440" role="img" aria-label="Plataforma de agentes en Kubernetes. El usuario llama a la API; la petición pasa por los guardrails de entrada y llega al orquestador, que reparte el trabajo entre agentes especializados mediante A2A. Los agentes usan RAG, memoria, skills, MCP servers propios conectados a los sistemas del cliente y el LLM gateway hacia los proveedores de modelos. La respuesta sale por los guardrails de salida. Todo queda trazado con OpenTelemetry.">
+<defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" style="fill:rgba(var(--teal-rgb),.8)"/></marker></defs>
+<rect x="100" y="24" width="776" height="392" rx="18" class="g-k8s"/>
+<text x="122" y="50" class="g-lab">KUBERNETES</text><text x="216" y="50" class="g-s">un componente, un pod</text>
+<circle cx="46" cy="196" r="8" fill="none" style="stroke:rgba(var(--cream-rgb),.7)" stroke-width="1.4"/><path d="M30 224 C30 210 62 210 62 224" fill="none" style="stroke:rgba(var(--cream-rgb),.7)" stroke-width="1.4"/><text x="46" y="246" text-anchor="middle" class="g-t">Usuario</text>
+<rect x="124" y="140" width="70" height="150" rx="10" class="g-box"/><text x="159.0" y="220.0" text-anchor="middle" class="g-t">API</text>
+<rect x="232" y="140" width="128" height="50" rx="10" class="g-box"/><text x="296.0" y="162.0" text-anchor="middle" class="g-t">Guardrails</text><text x="296.0" y="178.0" text-anchor="middle" class="g-s">entrada</text>
+<rect x="232" y="240" width="128" height="50" rx="10" class="g-box"/><text x="296.0" y="262.0" text-anchor="middle" class="g-t">Guardrails</text><text x="296.0" y="278.0" text-anchor="middle" class="g-s">salida</text>
+<rect x="400" y="150" width="126" height="130" rx="10" class="g-box g-key"/><text x="463.0" y="220.0" text-anchor="middle" class="g-t big">Orquestador</text>
+<text x="536" y="207" class="g-lab">A2A</text>
+<rect x="572" y="96" width="108" height="44" rx="10" class="g-box"/><text x="626.0" y="123.0" text-anchor="middle" class="g-t">Agente A</text>
+<rect x="572" y="193" width="108" height="44" rx="10" class="g-box"/><text x="626.0" y="220.0" text-anchor="middle" class="g-t">Agente B</text>
+<rect x="572" y="290" width="108" height="44" rx="10" class="g-box"/><text x="626.0" y="317.0" text-anchor="middle" class="g-t">Agente C</text>
+<text x="626" y="84" text-anchor="middle" class="g-s">agentes especializados</text>
+<path d="M712 82 V322" class="g-e"/>
+<rect x="736" y="62" width="120" height="40" rx="10" class="g-box"/><text x="796.0" y="87.0" text-anchor="middle" class="g-t">RAG</text>
+<path d="M712 82 H734" class="g-e" marker-end="url(#ar)"/>
+<rect x="736" y="122" width="120" height="40" rx="10" class="g-box"/><text x="796.0" y="147.0" text-anchor="middle" class="g-t">Memoria</text>
+<path d="M712 142 H734" class="g-e" marker-end="url(#ar)"/>
+<rect x="736" y="182" width="120" height="40" rx="10" class="g-box"/><text x="796.0" y="207.0" text-anchor="middle" class="g-t">Skills</text>
+<path d="M712 202 H734" class="g-e" marker-end="url(#ar)"/>
+<rect x="736" y="242" width="120" height="40" rx="10" class="g-box"/><text x="796.0" y="267.0" text-anchor="middle" class="g-t">MCP servers</text>
+<path d="M712 262 H734" class="g-e" marker-end="url(#ar)"/>
+<rect x="736" y="302" width="120" height="40" rx="10" class="g-box"/><text x="796.0" y="327.0" text-anchor="middle" class="g-t">LLM Gateway</text>
+<path d="M712 322 H734" class="g-e" marker-end="url(#ar)"/>
+<rect x="896" y="239" width="96" height="46" rx="10" class="g-ext"/><text x="944.0" y="259.0" text-anchor="middle" class="g-t">Sistemas</text><text x="944.0" y="275.0" text-anchor="middle" class="g-s">del cliente</text>
+<rect x="896" y="299" width="96" height="46" rx="10" class="g-ext"/><text x="944.0" y="319.0" text-anchor="middle" class="g-t">Proveedores</text><text x="944.0" y="335.0" text-anchor="middle" class="g-s">de modelos</text>
+<path d="M856 262 H894" class="g-e" marker-end="url(#ar)"/>
+<path d="M856 322 H894" class="g-e" marker-end="url(#ar)"/>
+<path d="M58 192 C 92 192, 98 186, 122 186" class="g-e" marker-end="url(#ar)"/>
+<path d="M124 252 C 98 252, 92 226, 60 226" class="g-e" marker-end="url(#ar)"/>
+<path d="M194 165 H230" class="g-e" marker-end="url(#ar)"/>
+<path d="M360 165 H398" class="g-e" marker-end="url(#ar)"/>
+<path d="M400 265 H362" class="g-e" marker-end="url(#ar)"/>
+<path d="M232 265 H196" class="g-e" marker-end="url(#ar)"/>
+<path d="M526 215 C 550 215, 548 118, 570 118" class="g-e" marker-end="url(#ar)"/>
+<path d="M526 215 H570" class="g-e" marker-end="url(#ar)"/>
+<path d="M526 215 C 550 215, 548 312, 570 312" class="g-e" marker-end="url(#ar)"/>
+<path d="M680 118 H712 M680 215 H712 M680 312 H712" class="g-e"/>
+<text x="124" y="384" class="g-lab">OPENTELEMETRY</text><text x="244" y="384" class="g-s">una traza por petición, de punta a punta</text>
+<path d="M124 398 H854" style="stroke:rgba(var(--cream-rgb),.12)" stroke-width="1"/>
+<path d="M124 398 H194 M232 398 H360 M400 398 H526 M572 398 H680 M736 398 H856" class="g-otel"/>
+<path id="flow" d="M58 192 C 92 192, 98 186, 124 186 L 194 165 H 400 L 463 215 H 572 L 680 215 H 712 V 322 H 856" fill="none" stroke="none"/>
+<circle r="4.5" class="g-pk"><animateMotion dur="6s" repeatCount="indefinite" rotate="auto"><mpath href="#flow"/></animateMotion></circle>
+</svg>
+      </div>
+      <figcaption>{SECTIONS.arquitecturaPie} <span class="swipe">Desliza para ver el diagrama entero.</span></figcaption>
+    </figure>
+  </div>
+</section>

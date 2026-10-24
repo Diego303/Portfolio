@@ -1,0 +1,27 @@
+---
+import Icon from "./Icon.astro";
+import { cv } from "@/lib/cv";
+import { url } from "@/lib/format";
+import { CV_PDF, HERO } from "@/data/site";
+
+const { name, profiles } = cv.basics;
+const [first, ...rest] = name.split(" ");
+---
+
+<section class="hero" id="inicio">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="hello">{HERO.hello}</p>
+    <h1>{first}<br />{rest.join(" ")}</h1>
+    <p class="role">{HERO.role}</p>
+    <p class="thesis">{HERO.thesis}</p>
+    <div class="cta">
+      <a class="btn" href="#contacto">Escríbeme</a>
+      <a class="btn ghost" href={url(CV_PDF)} download><Icon name="download" />Descargar CV</a>
+      {profiles.map((p) => <a class="link" href={p.url} target="_blank" rel="noopener"><Icon name={p.icon} />{p.network}</a>)}
+    </div>
+    <ul class="facts">
+      {HERO.facts.map((f) => <li><b>{f.value}</b><span>{f.label}</span></li>)}
+    </ul>
+  </div>
+</section>

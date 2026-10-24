@@ -1,0 +1,29 @@
+---
+import Icon from "./Icon.astro";
+import { cv } from "@/lib/cv";
+import { SECTIONS } from "@/data/site";
+import { STACK_GROUPS } from "@/data/stack";
+
+const byName = new Map(cv.skills.map((s) => [s.name, s]));
+const grouped = new Set(STACK_GROUPS.flatMap((g) => g.skills));
+const unknown = [...grouped].filter((n) => !byName.has(n));
+const ungrouped = cv.skills.filter((s) => !grouped.has(s.name)).map((s) => s.name);
+if (unknown.length) throw new Error(`src/data/stack.ts nombra skills que no están en cv.json: ${unknown.join(", ")}`);
+if (ungrouped.length) throw new Error(`Skills de cv.json sin grupo en src/data/stack.ts: ${ungrouped.join(", ")}`);
+---
+
+<section class="block" id="stack">
+  <div class="wrap grid">
+    <div class="side"><h2>Stack<i></i></h2><p>{SECTIONS.stack.replace("{n}", String(cv.skills.length))}</p></div>
+    <div>{
+      STACK_GROUPS.map((g) => (
+        <div class="sgroup"><h3>{g.title}</h3><ul class="skills">{
+          g.skills.map((n) => {
+            const s = byName.get(n)!;
+            return <li class="skill" title={s.keywords.join(", ")}><Icon name={s.icon} /><span>{s.name}</span></li>;
+          })
+        }</ul></div>
+      ))
+    }</div>
+  </div>
+</section>

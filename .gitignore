@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # VS CODE
 .vscode/
+
+# Material de trabajo (prototipos y CV de origen)
+TMP/

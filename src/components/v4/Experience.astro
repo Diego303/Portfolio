@@ -1,0 +1,63 @@
+---
+import Icon from "./Icon.astro";
+import { cv } from "@/lib/cv";
+import { period } from "@/lib/format";
+import { SECTIONS } from "@/data/site";
+---
+
+<section class="block" id="experiencia">
+  <div class="wrap grid">
+    <div class="side"><h2>Experiencia<i></i></h2><p>{SECTIONS.experiencia}</p></div>
+    <div class="stack-y">
+      {
+        cv.work.map((job) => {
+          const where = job.url ? (
+            <a class="where" href={job.url} target="_blank" rel="noopener">{job.name}</a>
+          ) : (
+            <span class="where">{job.name}</span>
+          );
+          const skills = Object.entries(job.skills ?? {}).filter((e): e is [string, string] => !!e[1]);
+
+          // El puesto con etapas y áreas se cuenta a fondo; el resto, en dos columnas.
+          return job.phases && job.areas ? (
+            <article class="job">
+              <div class="when">{period(job.startDate, job.endDate)}<br />{job.location_type}</div>
+              <div>
+                <h3>{job.position}</h3>
+                {where}
+                <p class="desc">{job.summary}</p>
+                <ol class="phases" aria-label={`Etapas en ${job.name}`}>{job.phases.map((ph, i) => <li><span class="n">{i + 1}</span><div><b>{ph.name}</b>{ph.period && <em>{ph.period}</em>}<span>{ph.summary}</span><span class="chips">{ph.tech.map((t) => <i>{t}</i>)}</span></div></li>)}</ol>
+                <p class="muted" style="font-size:13.5px;margin-top:10px">{SECTIONS.experienciaEtapas}</p>
+                <details>
+                  <summary>Áreas de trabajo <small>{job.areas.length} áreas</small></summary>
+                  <div class="areas">{job.areas.map((a) => <div><h4><Icon name={a.icon} />{a.name}</h4><ul class="dash">{a.items.map((it) => <li>{it}</li>)}</ul></div>)}</div>
+                </details>
+                {job.achievements && (
+                  <details>
+                    <summary>Logros <small>{job.achievements.length}</small></summary>
+                    <ul class="dash" style="padding:4px 0 16px">{job.achievements.map((a) => <li>{a}</li>)}</ul>
+                  </details>
+                )}
+                {skills.length > 0 && (
+                  <details>
+                    <summary>Tecnologías <small>en este puesto</small></summary>
+                    <div class="sks" style="margin:2px 0 16px">{skills.map(([label, icon]) => <span class="sk"><Icon name={icon} class="ic sm" />{label}</span>)}</div>
+                  </details>
+                )}
+              </div>
+            </article>
+          ) : (
+            <article class="job">
+              <div class="when">{period(job.startDate, job.endDate)}<br />{job.location_type}</div>
+              <div><h3>{job.position}</h3>{where}
+                <p class="desc">{job.summary}</p>
+                <div class="cols"><div><h5>Responsabilidades</h5><ul class="dash">{job.responsibilities.map((r) => <li>{r}</li>)}</ul></div>{job.achievements && <div><h5>Logros</h5><ul class="dash">{job.achievements.map((a) => <li>{a}</li>)}</ul></div>}</div>
+                {skills.length > 0 && <div class="sks">{skills.map(([label, icon]) => <span class="sk"><Icon name={icon} class="ic sm" />{label}</span>)}</div>}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

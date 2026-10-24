@@ -1,0 +1,18 @@
+---
+import Icon from "./Icon.astro";
+import Palette from "./Palette.astro";
+import { cv } from "@/lib/cv";
+import { url } from "@/lib/format";
+import { CV_PDF, NAV } from "@/data/site";
+---
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inicio">{cv.basics.name}</a>
+    <nav class="nav" aria-label="Secciones">
+      {NAV.map((n) => <a href={n.href}>{n.label}</a>)}
+      <a class="navcv" href={url(CV_PDF)} download><Icon name="download" />CV</a>
+    </nav>
+    <Palette />
+  </div>
+</header>

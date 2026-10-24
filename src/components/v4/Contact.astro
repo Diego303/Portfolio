@@ -1,0 +1,25 @@
+---
+import Icon from "./Icon.astro";
+import { cv } from "@/lib/cv";
+import { url } from "@/lib/format";
+import { CV_PDF, SECTIONS } from "@/data/site";
+
+const { email, profiles } = cv.basics;
+---
+
+<section class="block" id="contacto">
+  <div class="wrap grid">
+    <div class="side"><h2>Contacto<i></i></h2></div>
+    <div class="stack-y">
+      <p class="muted">{SECTIONS.contacto}</p>
+      <p><span class="mail" id="mail">{email}</span></p>
+      <div class="cta" style="margin-top:0">
+        <button class="copy" id="copy" type="button">Copiar email</button>
+        <a class="link" href={`mailto:${email}`}>Abrir correo</a>
+        <a class="link" href={url(CV_PDF)} download><Icon name="download" />Descargar CV</a>
+        {profiles.map((p) => <a class="link" href={p.url} target="_blank" rel="noopener"><Icon name={p.icon} />{p.network}</a>)}
+      </div>
+      <p class="muted" id="copied" role="status" aria-live="polite" style="min-height:1.5em;font-size:14px"></p>
+    </div>
+  </div>
+</section>

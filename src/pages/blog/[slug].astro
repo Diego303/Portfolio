@@ -1,0 +1,62 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Icon from "@/components/v4/Icon.astro";
+import Palette from "@/components/v4/Palette.astro";
+import Footer from "@/components/v4/Footer.astro";
+import paletteJs from "@/scripts/palette.js?raw";
+import { cv } from "@/lib/cv";
+import { docDate, url } from "@/lib/format";
+import { CV_PDF } from "@/data/site";
+import "@/styles/post.css";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { data } = Astro.props.post;
+const { name } = cv.basics;
+---
+
+<Layout title={`${data.title} · ${name}`} description={data.description}>
+  <header class="top">
+    <div class="wrap">
+      <a class="mark" href={url()}>{name}</a>
+      <nav class="nav" aria-label="Secciones">
+        <a href={url("#documentos")}>Documentos</a>
+        <a href={url("#contacto")}>Contacto</a>
+        <a class="navcv" href={url(CV_PDF)} download><Icon name="download" />CV</a>
+      </nav>
+      <Palette />
+    </div>
+  </header>
+
+  <main>
+    <article class="post wrap">
+      <a class="link" href={url("#documentos")}>Volver a Documentos</a>
+      <header class="post-head">
+        <p class="post-meta"><span class="post-code">{data.code}</span><span>{docDate(data.date)}</span><span>{data.readingTime} min de lectura</span></p>
+        <h1>{data.title}</h1>
+        <p class="lead">{data.description}</p>
+        <div class="ptags">{data.tags.map((t) => <i>{t}</i>)}</div>
+      </header>
+      <figure class="post-cover"><img src={url(data.cover)} alt="" width="633" height="318" /></figure>
+      <div class="post-body">
+        {
+          data.body.map((b) =>
+            b.type === "h2" ? <h2>{b.text}</h2> : b.type === "ul" ? <ul class="dash">{b.items.map((it) => <li>{it}</li>)}</ul> : <p>{b.text}</p>,
+          )
+        }
+      </div>
+      <p class="post-end"><a class="link" href={url("#documentos")}>Volver a Documentos</a></p>
+    </article>
+  </main>
+
+  <Footer />
+  <script is:inline set:html={paletteJs} />
+</Layout>
