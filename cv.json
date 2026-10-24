@@ -906,6 +906,72 @@
   ],
   "projects": [
     {
+      "name": "harness-base",
+      "category": "opensource",
+      "context": "GitHub · agentes-ia",
+      "isActive": false,
+      "description": "Harness SDD multiagente para Claude Code. El orquestador coordina cuatro subagentes con contexto limpio (explorer, designer, builder y reviewer), con un único gate humano entre el diseño y la implementación. Herramientas deterministas en Python aplican la máquina de estados, congelan la especificación aprobada, ejecutan la aceptación, miden el coste de cada subagente y hacen cumplir las fronteras de seguridad.",
+      "highlights": [
+        "Usado en dos proyectos reales: 42 features y ~60 % con PASS en la primera verificación",
+        "Máquina de estados con 24 guards; la especificación se congela por hash al aprobar",
+        "Coste de cada subagente estimado desde sus tokens y presupuesto por feature",
+        "Guard en cada herramienta: escrituras acotadas por agente, sin secretos ni red externa"
+      ],
+      "tags": [
+        "Claude Code",
+        "Harness engineering",
+        "SDD",
+        "Multi-agente",
+        "Python"
+      ],
+      "url": "https://github.com/Diego303/agentes-ia/tree/main/harness-engineering/harness-base",
+      "github": "https://github.com/Diego303/agentes-ia/tree/main/harness-engineering/harness-base"
+    },
+    {
+      "name": "harness-base-olas",
+      "category": "opensource",
+      "context": "GitHub · agentes-ia",
+      "isActive": false,
+      "description": "El mismo harness con modo de olas: varias features a la vez, cada una en su worktree de git y con su propia sesión de Claude Code, mientras el árbol principal solo integra. Incluye un prompt que convierte un diseño técnico en el plan de implementación, el backlog, las olas y un harness especializado para el proyecto.",
+      "highlights": [
+        "ola.sh abre, integra con squash, resuelve los conflictos mecánicos y pasa la regresión",
+        "Nunca hace commit ni push sin preguntarte; desde Claude Code los hace el humano",
+        "Probado de punta a punta con worktrees reales"
+      ],
+      "tags": [
+        "Claude Code",
+        "Git worktrees",
+        "Bash",
+        "tmux",
+        "Harness engineering"
+      ],
+      "url": "https://github.com/Diego303/agentes-ia/tree/main/harness-engineering/harness-base-olas",
+      "github": "https://github.com/Diego303/agentes-ia/tree/main/harness-engineering/harness-base-olas"
+    },
+    {
+      "name": "ops-mcp",
+      "category": "opensource",
+      "context": "GitHub · agentes-ia",
+      "isActive": false,
+      "description": "Servidor MCP de referencia (SDK de Python 2.3) con las herramientas de operaciones de una plataforma: estado de servicios, despliegues, búsqueda en runbooks con RAG y creación de incidentes. Autenticación OAuth 2.1 como resource server, Streamable HTTP sin estado y despliegue en Kubernetes.",
+      "highlights": [
+        "Tools pensadas para el modelo: entradas acotadas, salida estructurada y anotaciones de solo lectura o destructiva",
+        "Tools asíncronas organizadas por carpetas y logging estructurado de cada llamada",
+        "OAuth 2.1 por scopes (ops:read, ops:write) con JWT o tokens estáticos; falla cerrado",
+        "Protección contra DNS rebinding y trazas OpenTelemetry propagadas desde el agente",
+        "Imagen Docker, HPA y NetworkPolicies en Kubernetes"
+      ],
+      "tags": [
+        "MCP",
+        "Python",
+        "OAuth 2.1",
+        "OpenTelemetry",
+        "Kubernetes"
+      ],
+      "url": "https://github.com/Diego303/agentes-ia/tree/main/mcp",
+      "github": "https://github.com/Diego303/agentes-ia/tree/main/mcp"
+    },
+    {
       "name": "Plataforma de agentes de IA",
       "category": "profesional",
       "context": "NTT Data · hoy",

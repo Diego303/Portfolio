@@ -1,0 +1,77 @@
+---
+import Icon from "./Icon.astro";
+import { HARNESS_REPO, SECTIONS } from "@/data/site";
+// Diagrama del harness base de agentes-ia (harness-engineering/harness-base/HARNESS/HARNESS.md §2, 3, 4, 8 y 10),
+// sin el modo de olas. Mismas clases que el de Arquitectura; sus marcadores llevan otros ids (har*).
+// Sin animación: main.js solo quita las animaciones de #arquitectura con prefers-reduced-motion.
+---
+
+<section class="block" id="harness">
+  <div class="wrap">
+    <div class="arch-head">
+      <h2>Harness engineering<i></i></h2>
+      <p>{SECTIONS.harness}</p>
+    </div>
+    <figure class="arch">
+      <div class="arch-scroll" tabindex="0" aria-label="Diagrama del harness; desliza para verlo entero">
+<svg viewBox="0 0 1000 452" role="img" aria-label="Harness de agentes de código: el humano da la petición al orquestador, la sesión principal de Claude Code, que lanza cada fase como un subagente con contexto limpio (explorer, designer, builder y reviewer) con un único gate humano, GATE#1, entre el diseño y la implementación y un solo repair del reviewer al builder, hasta archivar la feature o bloquearla para una decisión humana, mientras cada transición pasa por herramientas deterministas en Python y el estado de la feature queda en disco en .claude/state.">
+<defs>
+<marker id="har" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" style="fill:rgba(var(--teal-rgb),.8)"/></marker>
+<marker id="har-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" style="fill:var(--amber)"/></marker>
+<marker id="har-m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" style="fill:rgba(var(--cream-rgb),.45)"/></marker>
+</defs>
+
+<!-- Control: orquestador, humano y la salida a blocked -->
+<text x="16" y="22" class="g-s">sesión principal · coordina, no implementa</text>
+<rect x="16" y="34" width="236" height="52" rx="10" class="g-box"/><text x="134" y="56" text-anchor="middle" class="g-t big">Orquestador</text><text x="134" y="74" text-anchor="middle" class="g-s">CLAUDE.md · HARNESS.md · AGENTS.md</text>
+<rect x="288" y="34" width="128" height="52" rx="10" class="g-box"/><text x="352" y="56" text-anchor="middle" class="g-t big">Humano</text><text x="352" y="74" text-anchor="middle" class="g-s">GATE#1 · commits</text>
+<path d="M286 60 H256" class="g-e" marker-end="url(#har)"/>
+<rect x="630" y="34" width="140" height="52" rx="10" class="g-ext"/><text x="700" y="56" text-anchor="middle" class="g-t">blocked</text><text x="700" y="74" text-anchor="middle" class="g-s">decisión humana</text>
+<path d="M628 60 H420" fill="none" style="stroke:rgba(var(--cream-rgb),.28)" stroke-dasharray="4 4" marker-end="url(#har-m)"/>
+<path d="M700 208 V90" fill="none" style="stroke:rgba(var(--cream-rgb),.28)" stroke-dasharray="4 4" marker-end="url(#har-m)"/>
+
+<!-- El orquestador lanza cada fase -->
+<path d="M134 86 V152 M58 152 H342 M362 152 H653" class="g-e"/>
+<path d="M58 152 V206 M204 152 V206 M492 152 V206 M653 152 V206" class="g-e" marker-end="url(#har)"/>
+<text x="372" y="144" class="g-s">lanza cada fase · un subagente con contexto limpio</text>
+
+<!-- Flujo de una feature -->
+<rect x="16" y="210" width="84" height="48" rx="10" class="g-box"/><text x="58" y="230" text-anchor="middle" class="g-t">Explorer</text><text x="58" y="247" text-anchor="middle" class="g-s">context.md</text>
+<rect x="118" y="210" width="172" height="48" rx="10" class="g-box"/><text x="204" y="230" text-anchor="middle" class="g-t">Designer</text><text x="204" y="247" text-anchor="middle" class="g-s">proposal · design · acceptance</text>
+<polygon points="308,234 352,202 396,234 352,266" class="g-box g-key"/><text x="352" y="239" text-anchor="middle" class="g-t big">GATE#1</text>
+<rect x="414" y="210" width="156" height="48" rx="10" class="g-box"/><text x="492" y="230" text-anchor="middle" class="g-t">Builder</text><text x="492" y="247" text-anchor="middle" class="g-s">código · implementation.md</text>
+<rect x="588" y="210" width="130" height="48" rx="10" class="g-box"/><text x="653" y="230" text-anchor="middle" class="g-t">Reviewer</text><text x="653" y="247" text-anchor="middle" class="g-s">veredicto · archive.md</text>
+<rect x="736" y="214" width="74" height="40" rx="20" class="g-box"/><text x="773" y="239" text-anchor="middle" class="g-t">archivada</text>
+<path d="M100 234 H116 M290 234 H306 M396 234 H412 M570 234 H586 M718 234 H734" class="g-e" marker-end="url(#har)"/>
+<path d="M352 202 V90" fill="none" style="stroke:var(--amber)" stroke-width="1.4" marker-end="url(#har-a)"/>
+<text x="360" y="120" class="g-s">único punto humano</text>
+<path d="M606 208 C 600 184, 562 184, 556 206" class="g-e" marker-end="url(#har)"/>
+<text x="581" y="181" text-anchor="middle" class="g-s">1 repair</text>
+
+<!-- Estado en disco -->
+<path d="M812 234 H846" fill="none" style="stroke:rgba(var(--teal-rgb),.55)" stroke-width="1.3" stroke-dasharray="3 3" marker-start="url(#har)" marker-end="url(#har)"/>
+<rect x="848" y="110" width="136" height="196" rx="10" class="g-box"/>
+<text x="916" y="136" text-anchor="middle" class="g-t big">Estado en disco</text>
+<text x="916" y="154" text-anchor="middle" class="g-s">.claude/state/&lt;ID&gt;/</text>
+<path d="M864 170 H968" style="stroke:rgba(var(--cream-rgb),.12)" stroke-width="1"/>
+<text x="916" y="192" text-anchor="middle" class="g-t">especificación</text><text x="916" y="208" text-anchor="middle" class="g-s">congelada por hash</text>
+<text x="916" y="238" text-anchor="middle" class="g-t">event.log</text><text x="916" y="254" text-anchor="middle" class="g-s">transiciones y runtimes</text>
+<text x="916" y="280" text-anchor="middle" class="g-s">memoria entre sesiones</text><text x="916" y="295" text-anchor="middle" class="g-s">la leen y la escriben</text>
+
+<!-- Cada transición pasa por las herramientas deterministas -->
+<path d="M108 234 V316 M298 234 V316 M404 234 V316 M578 234 V316 M726 234 V316" fill="none" style="stroke:rgba(var(--teal-rgb),.35)" stroke-dasharray="3 4"/>
+<rect x="16" y="318" width="968" height="118" rx="18" class="g-k8s"/>
+<text x="32" y="342" class="g-lab">HERRAMIENTAS DETERMINISTAS</text><text x="237" y="342" class="g-s">Python sin dependencias</text>
+<text x="968" y="342" text-anchor="end" class="g-s">cada transición pasa por aquí</text>
+<rect x="32" y="356" width="184" height="56" rx="10" class="g-box"/><text x="124" y="379" text-anchor="middle" class="g-t">feature.py</text><text x="124" y="397" text-anchor="middle" class="g-s">máquina de estados · 24 guards</text>
+<rect x="246" y="356" width="140" height="56" rx="10" class="g-box"/><text x="316" y="379" text-anchor="middle" class="g-t">validate_harness.py</text><text x="316" y="397" text-anchor="middle" class="g-s">valida cada transición</text>
+<rect x="416" y="356" width="136" height="56" rx="10" class="g-box"/><text x="484" y="379" text-anchor="middle" class="g-t">run_acceptance.py</text><text x="484" y="397" text-anchor="middle" class="g-s">aceptación congelada</text>
+<rect x="582" y="356" width="186" height="56" rx="10" class="g-box"/><text x="675" y="379" text-anchor="middle" class="g-t">ledger.py <tspan class="g-s">· hook SubagentStop</tspan></text><text x="675" y="397" text-anchor="middle" class="g-s">coste por subagente</text>
+<rect x="798" y="356" width="170" height="56" rx="10" class="g-box"/><text x="883" y="379" text-anchor="middle" class="g-t">guard.py <tspan class="g-s">· hook PreToolUse</tspan></text><text x="883" y="397" text-anchor="middle" class="g-s">fronteras de seguridad</text>
+</svg>
+      </div>
+      <figcaption>{SECTIONS.harnessPie} <span class="swipe">Desliza para ver el diagrama entero.</span></figcaption>
+    </figure>
+    <p style="margin-top:22px"><a class="link" href={HARNESS_REPO} target="_blank" rel="noopener"><Icon name="mdi:github" />harness-base en GitHub</a></p>
+  </div>
+</section>

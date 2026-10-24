@@ -1,0 +1,26 @@
+---
+// Cabecera de las páginas fuera del portfolio (documentos y posts): vuelve al inicio y mantiene el selector de paleta.
+import Icon from "./Icon.astro";
+import Palette from "./Palette.astro";
+import { cv } from "@/lib/cv";
+import { url } from "@/lib/format";
+import { CV_PDF } from "@/data/site";
+
+interface Props {
+  current?: "documentos";
+}
+
+const { current } = Astro.props;
+---
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href={url()}>{cv.basics.name}</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href={url("documentos.html")} class:list={{ on: current === "documentos" }} aria-current={current === "documentos" ? "page" : undefined}>Documentos</a>
+      <a href={url("#contacto")}>Contacto</a>
+      <a class="navcv" href={url(CV_PDF)} download><Icon name="download" />CV</a>
+    </nav>
+    <Palette />
+  </div>
+</header>

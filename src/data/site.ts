@@ -7,6 +7,8 @@ export const CV_PDF = "cv-diego-alba-ruiz.pdf";
 
 export const FOOTER_YEAR = "2026";
 
+export const HARNESS_REPO = "https://github.com/Diego303/agentes-ia/tree/main/harness-engineering/harness-base";
+
 export const NAV = [
   { href: "#sobre", label: "Sobre mí" },
   { href: "#experiencia", label: "Experiencia" },
@@ -31,7 +33,6 @@ export const HERO = {
   facts: [
     { value: "+3 años", label: "en NTT Data, desde 2023" },
     { value: "IA + DevOps", label: "de la idea al clúster" },
-    { value: "CKAD", label: "y 3 certificaciones más" },
   ],
 };
 
@@ -43,6 +44,10 @@ export const SECTIONS = {
     "La plataforma de agentes con la que trabajo: cada componente es un servicio en su propio pod de Kubernetes, con escalado independiente, y todo el recorrido de una petición queda trazado.",
   arquitecturaPie:
     "Recorrido de una petición: API, guardrails de entrada, orquestador, agentes especializados con su contexto y herramientas, LLM gateway y guardrails de salida.",
+  harness:
+    "Cómo trabajo con agentes de código: un harness que convierte cada feature en un flujo verificable, con un único gate humano y la evidencia en disco.",
+  harnessPie:
+    "Recorrido de una feature: el orquestador lanza cada fase como un subagente con contexto limpio, tú apruebas el diseño en GATE#1 y las herramientas deterministas validan cada paso.",
   // {n} se sustituye por el número de áreas de techexp, en letra.
   capacidades: "Lo que sé hacer, en {n} áreas. Elige una para ver el resumen.",
   proyectos: "Repos públicos, proyectos profesionales en NTT Data (código privado) y académicos.",
