@@ -1,0 +1,30 @@
+{
+  "code": "DOC-001",
+  "title": "Por qué escribo mis propios MCP servers",
+  "description": "Qué gana un agente corporativo cuando las herramientas MCP las escribes tú: superficie mínima, permisos acotados y descripciones pensadas para el modelo.",
+  "date": "2026-05-12",
+  "readingTime": 5,
+  "tags": ["MCP", "Agentes"],
+  "cover": "blog/mcp-servers-propios.webp",
+  "body": [
+    { "type": "p", "text": "En la plataforma de agentes con la que trabajo, los agentes no tocan directamente los sistemas del cliente: lo hacen a través de herramientas expuestas con MCP (Model Context Protocol). Cuando el caso de uso es muy específico de un cliente, esas herramientas las escribo yo. Esta nota explica por qué." },
+    { "type": "h2", "text": "Qué es un MCP server aquí" },
+    { "type": "p", "text": "Un MCP server es un servicio que expone operaciones como herramientas que un agente puede descubrir y llamar. En la plataforma, cada MCP server es un componente más: vive en su propio pod de Kubernetes, escala por su cuenta y deja trazas con OpenTelemetry como el resto." },
+    { "type": "h2", "text": "Superficie mínima" },
+    { "type": "p", "text": "Un servidor genérico suele exponer todo lo que el sistema de debajo sabe hacer. Para un agente corporativo eso es demasiado: cuantas más herramientas ve, más fácil es que elija mal o que haga algo que nadie le pidió." },
+    { "type": "p", "text": "Cuando lo escribo yo, expongo solo las operaciones que el caso de uso necesita, con los parámetros justos. Si el agente solo tiene que consultar un dato, no ve la operación que lo modifica." },
+    { "type": "h2", "text": "Permisos acotados" },
+    { "type": "p", "text": "La herramienta es el punto donde se decide qué puede hacer el agente sobre un sistema real. Escribirla permite fijar ahí los límites:" },
+    { "type": "ul", "items": [
+      "Credenciales propias del servicio, con los permisos mínimos sobre el sistema del cliente.",
+      "Validación de los parámetros antes de llamar al sistema, no después.",
+      "Cada llamada queda trazada: qué agente la pidió, con qué datos y qué devolvió."
+    ] },
+    { "type": "h2", "text": "Descripciones pensadas para el modelo" },
+    { "type": "p", "text": "El agente decide qué herramienta usar leyendo su nombre, su descripción y su esquema de parámetros. Esa descripción es, en la práctica, parte del prompt. Por eso la escribo pensando en el modelo: qué hace la herramienta, cuándo usarla, cuándo no y qué devuelve, con el vocabulario del negocio del cliente." },
+    { "type": "h2", "text": "Sin depender de integraciones cerradas" },
+    { "type": "p", "text": "Tener el código propio significa poder adaptar la herramienta cuando cambia el caso de uso, probarla con tests como cualquier otro servicio y desplegarla con el mismo pipeline CI/CD que el resto de la plataforma." },
+    { "type": "h2", "text": "En resumen" },
+    { "type": "p", "text": "Escribir el MCP server es más trabajo al principio, pero el agente ve menos, puede hacer menos y entiende mejor lo que tiene a mano. En un entorno corporativo, ese es el equilibrio que busco." }
+  ]
+}

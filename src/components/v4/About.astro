@@ -1,0 +1,28 @@
+---
+import { cv } from "@/lib/cv";
+import { DIFFERENTIATORS } from "@/data/about";
+
+const { name, image, summary, story, objective } = cv.basics;
+---
+
+<section class="block" id="sobre">
+  <div class="wrap grid">
+    <div class="side">
+      <h2>Sobre mí<i></i></h2>
+      <figure class="portrait">
+        <img src={image} alt={name} width="560" height="700" />
+      </figure>
+    </div>
+    <div class="stack-y">
+      <p class="lead">{summary}</p>
+      <h3 class="subhead">Mi trayectoria</h3>
+      <div class="story">{story.map((s) => <p>{s}</p>)}</div>
+      <h3 class="subhead">Qué me diferencia</h3>
+      <div class="pairs">{DIFFERENTIATORS.map((d) => <div><h3>{d.title}</h3><p>{d.text}</p></div>)}</div>
+      <h3 class="subhead">Cómo trabajo</h3>
+      <ul class="soft">{cv.softSkills.map((s) => <li><b>{s.name}</b><span>{s.description}</span></li>)}</ul>
+      <h3 class="subhead">Lo que busco</h3>
+      <p class="quote">{objective}</p>
+    </div>
+  </div>
+</section>

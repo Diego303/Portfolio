@@ -1,0 +1,28 @@
+---
+import { cv } from "@/lib/cv";
+import { SECTIONS } from "@/data/site";
+---
+
+<section class="block" id="formacion">
+  <div class="wrap grid">
+    <div class="side"><h2>Formación<i></i></h2><p>{SECTIONS.formacion}</p></div>
+    <div class="stack-y">
+      <h3 class="subhead" style="margin-top:0">Estudios</h3>
+      <div class="rows">{
+        cv.education.map((e) => (
+          <div class="row"><span class="y">{e.startDate} – {e.endDate}</span><div>{e.url ? <a class="t lk" href={e.url} target="_blank" rel="noopener">{e.area}</a> : <div class="t">{e.area}</div>}<div class="s">{e.institution}</div><div class="s">{e.studyType}</div></div></div>
+        ))
+      }</div>
+      <h3 class="subhead">Certificaciones</h3>
+      <div class="rows">{
+        cv.certificates.map((c) => (
+          <div class="row"><span class="y">{c.date}</span><div>{c.url ? <a class="t lk" href={c.url} target="_blank" rel="noopener">{c.name}</a> : <div class="t">{c.name}</div>}<div class="s">{c.issuer}</div></div></div>
+        ))
+      }</div>
+      <div class="two">
+        <div><h3 class="subhead" style="margin-bottom:14px">Idiomas</h3><ul class="kv">{cv.languages.map((l) => <li><b>{l.language}</b><span>{l.fluency}</span></li>)}</ul></div>
+        <div><h3 class="subhead" style="margin-bottom:14px">Intereses</h3><ul class="kv">{cv.interests.map((it) => <li><b>{it.name}</b><span>{it.keywords.join(", ")}</span></li>)}</ul></div>
+      </div>
+    </div>
+  </div>
+</section>

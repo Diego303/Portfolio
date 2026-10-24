@@ -1,0 +1,55 @@
+---
+import Icon from "./Icon.astro";
+import { cv } from "@/lib/cv";
+import { SECTIONS } from "@/data/site";
+import { EXAMPLE_REPOS } from "@/data/exampleRepos";
+
+const CATEGORY: Record<string, string> = { opensource: "Open source", profesional: "Profesional", academico: "Académico" };
+const FILTERS = [
+  { f: "all", label: "Todos" },
+  { f: "opensource", label: "Open source" },
+  { f: "profesional", label: "Profesionales" },
+  { f: "academico", label: "Académicos" },
+];
+
+// Primero los repos de ejemplo y después los proyectos de cv.json, en su orden.
+const cards = [
+  ...EXAMPLE_REPOS.map((r) => ({ ...r, category: "opensource", github: undefined, example: true })),
+  ...cv.projects.map((p) => ({ ...p, example: false })),
+];
+const count = (f: string) => (f === "all" ? cards.length : cards.filter((c) => c.category === f).length);
+---
+
+<section class="block" id="proyectos">
+  <div class="wrap grid">
+    <div class="side"><h2>Proyectos<i></i></h2><p>{SECTIONS.proyectos}</p></div>
+    <div>
+      <div class="filters" role="group" aria-label="Filtrar proyectos">
+        {FILTERS.map((b) => <button class="fbtn" type="button" data-f={b.f} aria-pressed={b.f === "all" ? "true" : "false"}>{b.label}<small>{count(b.f)}</small></button>)}
+      </div>
+      <div class="pgrid" id="pgrid">{
+        cards.map((p) => (
+          <>
+            {p.example && <Fragment set:html={"<!-- EJEMPLO: cambia por un repo real -->"} />}
+            <article class="pcard" data-cat={p.category}>
+              <div class="pmeta"><span class={`pcat ${p.category}`}>{CATEGORY[p.category]}</span><span>{p.context}</span></div>
+              <h3 class={p.category === "opensource" ? "mono-title" : undefined}>{p.name}</h3>
+              <p>{p.description}</p>
+              <ul class="dash">{p.highlights.map((h) => <li>{h}</li>)}</ul>
+              <div class="ptags">{p.tags.map((t) => <i>{t}</i>)}</div>
+              {p.example ? (
+                <span class="pfoot muted"><Icon name="mdi:github" class="ic sm" />Repositorio en preparación</span>
+              ) : p.github ? (
+                <a class="pfoot" href={p.github} target="_blank" rel="noopener"><Icon name="mdi:github" class="ic sm" />Ver en GitHub<Icon name="mdi:arrow-top-right" class="ic sm" /></a>
+              ) : p.category === "profesional" ? (
+                <span class="pfoot muted"><Icon name="mdi:lock-outline" class="ic sm" />Código privado</span>
+              ) : (
+                <span class="pfoot muted">Sin repositorio público</span>
+              )}
+            </article>
+          </>
+        ))
+      }</div>
+    </div>
+  </div>
+</section>

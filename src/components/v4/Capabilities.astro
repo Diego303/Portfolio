@@ -1,0 +1,39 @@
+---
+import Icon from "./Icon.astro";
+import { cv } from "@/lib/cv";
+import { inWords } from "@/lib/format";
+import { SECTIONS } from "@/data/site";
+import { CAPABILITY_SUMMARIES } from "@/data/capabilities";
+
+const caps = cv.techexp;
+---
+
+<section class="block" id="capacidades">
+  <div class="wrap grid">
+    <div class="side"><h2>Capacidades<i></i></h2><p>{SECTIONS.capacidades.replace("{n}", inWords(caps.length))}</p></div>
+    <div class="caps" id="caps">{
+      caps.map((c, i) => {
+        const s = CAPABILITY_SUMMARIES[c.name];
+        return (
+          <div class="cap" data-i={i}>
+            <button class="cap-tab" type="button" id={`cap-t${i}`} aria-expanded={i === 0 ? "true" : "false"} aria-controls={`cap-p${i}`}>
+              <span class="cap-ic"><Icon name={c.icon} /></span><span class="cap-name">{c.name}</span>
+            </button>
+            <div class="cap-panel" id={`cap-p${i}`} role="region" aria-labelledby={`cap-t${i}`} hidden={i !== 0}>
+              <div class="cap-big"><Icon name={c.icon} class="ic xl" /><h3>{c.name}</h3></div>
+              {s ? (
+                <>
+                  <p class="cap-sum">{s.summary}</p>
+                  <ul class="dash">{s.points.map((p) => <li>{p}</li>)}</ul>
+                  <details class="cap-more"><summary>Ver todo el detalle <small>{c.highlights.length} puntos</small></summary><ul class="dash">{c.highlights.map((h) => <li>{h}</li>)}</ul></details>
+                </>
+              ) : (
+                <ul class="dash">{c.highlights.map((h) => <li>{h}</li>)}</ul>
+              )}
+            </div>
+          </div>
+        );
+      })
+    }</div>
+  </div>
+</section>

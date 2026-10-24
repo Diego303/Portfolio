@@ -1,0 +1,34 @@
+{
+  "code": "DOC-002",
+  "title": "Anatomía de una petición en una plataforma de agentes",
+  "description": "Sigo una petición de principio a fin: API, guardrails, orquestador, agentes con A2A, RAG, memoria, MCP, LLM gateway y salida, todo trazado con OpenTelemetry.",
+  "date": "2026-06-09",
+  "readingTime": 6,
+  "tags": ["Arquitectura", "OpenTelemetry"],
+  "cover": "blog/anatomia-de-una-peticion.webp",
+  "body": [
+    { "type": "p", "text": "En la sección de arquitectura del portfolio hay un diagrama con un punto que recorre la plataforma. Esta nota cuenta ese recorrido paso a paso: qué ocurre con una petición desde que llega hasta que sale la respuesta." },
+    { "type": "h2", "text": "1. La API" },
+    { "type": "p", "text": "Todo entra por una API. Es el único punto de contacto con el usuario y el lugar donde empieza la traza de OpenTelemetry que acompañará a la petición hasta el final." },
+    { "type": "h2", "text": "2. Guardrails de entrada" },
+    { "type": "p", "text": "Antes de que ningún modelo lea la petición, pasa por los guardrails de entrada: validación, detección de prompt injection y protección de datos sensibles. Si algo no cumple las políticas de la empresa, la petición no sigue." },
+    { "type": "h2", "text": "3. El orquestador" },
+    { "type": "p", "text": "El orquestador decide qué hay que hacer y quién lo hace. No resuelve la tarea él solo: la reparte entre agentes especializados." },
+    { "type": "h2", "text": "4. Agentes especializados con A2A" },
+    { "type": "p", "text": "Los agentes se comunican con el orquestador mediante A2A (Agent-to-Agent). Cada agente tiene un cometido acotado y el contexto que necesita para cumplirlo, ni más ni menos." },
+    { "type": "h2", "text": "5. Contexto y herramientas" },
+    { "type": "p", "text": "Para trabajar, cada agente tira de las piezas compartidas de la plataforma:" },
+    { "type": "ul", "items": [
+      "RAG, para responder con la documentación real del cliente.",
+      "Memoria, a corto plazo para la conversación y a largo plazo para lo que debe persistir entre sesiones.",
+      "Skills, capacidades empaquetadas que el agente carga cuando las necesita.",
+      "MCP servers propios, para actuar sobre los sistemas del cliente con permisos acotados."
+    ] },
+    { "type": "h2", "text": "6. El LLM gateway" },
+    { "type": "p", "text": "Ningún agente llama directamente a un proveedor de modelos. Todas las llamadas pasan por el LLM gateway, que abstrae el proveedor, enruta cada petición al modelo adecuado y centraliza el control de uso." },
+    { "type": "h2", "text": "7. Guardrails de salida" },
+    { "type": "p", "text": "La respuesta vuelve al orquestador y, antes de salir por la API, atraviesa los guardrails de salida, que revisan que no se filtren datos sensibles ni se incumplan las políticas de la empresa." },
+    { "type": "h2", "text": "Una traza por petición" },
+    { "type": "p", "text": "Cada componente es un servicio en su propio pod de Kubernetes, con su escalado independiente. Lo que los une es la traza: con OpenTelemetry, cada salto queda registrado, incluidas las llamadas de los agentes a modelos y herramientas. Cuando algo falla o va lento, se ve dónde." }
+  ]
+}

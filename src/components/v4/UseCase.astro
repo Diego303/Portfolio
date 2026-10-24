@@ -1,0 +1,21 @@
+---
+import { SECTIONS } from "@/data/site";
+import { USE_CASE } from "@/data/useCase";
+---
+
+<section class="block" id="caso">
+  <div class="wrap grid">
+    <div class="side"><h2>Caso de uso<i></i></h2><p>{SECTIONS.caso}</p></div>
+    <!-- AFINA ESTE CASO: cambia el sector, el problema y el resultado por los de tu proyecto real. Sin cifras si no puedes darlas. -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-tag">{USE_CASE.tag}</span>
+        <h3>{USE_CASE.title}</h3>
+      </div>
+      <dl class="case-steps">
+        {USE_CASE.steps.map((s, i) => <div><dt><span>{i + 1}</span>{s.title}</dt><dd>{s.text}</dd></div>)}
+      </dl>
+      <div class="ptags case-stack">{USE_CASE.stack.map((t) => <i>{t}</i>)}</div>
+    </article>
+  </div>
+</section>
