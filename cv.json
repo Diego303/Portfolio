@@ -3,11 +3,11 @@
   "pageLayout": "two-column",
   "basics": {
     "name": "Diego Alba Ruiz",
-    "label": "DevOps & AIOps Engineer",
+    "label": "AI Engineer · Plataformas de agentes de IA & DevOps",
     "image": "/Portfolio/avatar.png",
     "email": "diego303.d@gmail.com",
-    "url": "",
-    "summary": "Me apasiona la tecnología y el desarrollo de software desde muy joven. Soy graduado en Ingeniería Informática, con una gran capacidad de aprendizaje y una fuerte orientación a resultados. Me caracterizo por mi compromiso, mi adaptabilidad y mi habilidad para trabajar en equipo, aportando siempre lo mejor de mí tanto a mis compañeros como a cada proyecto. Mi objetivo es seguir desarrollando mi potencial, creciendo de manera profesional y personal mientras contribuyo a crear soluciones tecnológicas de alto impacto.",
+    "url": "https://diego303.github.io/Portfolio/",
+    "summary": "Ingeniero de IA especializado en sistemas de agentes y plataformas agénticas para empresa. Diseño, desarrollo y despliego la pieza completa: el framework de agentes, los MCP servers propios, RAG y memoria, el LLM gateway, los guardrails de seguridad y la infraestructura en Kubernetes que lo hace escalable y observable. Vengo del backend en Python y del DevOps (Kubernetes, Terraform, CI/CD, Azure), así que llevo los casos de uso de la idea a producción. En mi día a día desarrollo con agentes de código como Claude Code y Codex, aplicando harness engineering, skills y context engineering.",
     "theme": "blue",
     "profiles": [
       {
@@ -17,27 +17,34 @@
         "url": "https://github.com/Diego303"
       },
       {
-        "network": "Linkedin",
+        "network": "LinkedIn",
         "icon": "mdi:linkedin",
-        "username": "Diego",
+        "username": "diegoarinf",
         "url": "https://www.linkedin.com/in/diegoarinf"
       }
-    ]
+    ],
+    "story": [
+      "Desde pequeño he sido curioso y programador por vocación, lo que me ha llevado a probar y a intentar montar proyectos propios.",
+      "Acabando la universidad empecé en NTT Data con automatizaciones en Python y de ahí pasé a DevOps e infraestructura cloud: desplegar y mantener clústeres de Kubernetes y OpenShift sobre Microsoft Azure, automatizar infraestructura con Terraform y Ansible, y montar observabilidad con New Relic y OpenTelemetry, con alertas y autoremediaciones.",
+      "Después di el salto a la inteligencia artificial: primero modelos de redes neuronales y machine learning, y después la IA generativa aplicada a procesos reales de negocio.",
+      "Hoy construyo sistemas de agentes y plataformas agénticas para empresa: framework propio, sistemas multi-agente con A2A, MCP servers propios, RAG, memoria, LLM gateway, guardrails y skills, cada componente en su pod. Lo que me diferencia es que no solo diseño agentes: sé llevarlos a producción con la infraestructura que necesitan debajo."
+    ],
+    "objective": "Seguir creciendo profesional y personalmente mientras construyo soluciones tecnológicas de alto impacto: plataformas de agentes de IA que lleguen a producción y equipos capaces de mantenerlas."
   },
   "education": [
     {
-      "institution": "Escuela Superior de Informática, Ciudad Real",
+      "institution": "Escuela Superior de Informática, Ciudad Real (UCLM)",
       "url": "https://esi.uclm.es/",
-      "area": "Grado en Ingenieria Informática",
-      "studyType": "Estudiante universitario",
+      "area": "Grado en Ingeniería Informática",
+      "studyType": "Grado universitario",
       "startDate": "2019",
       "endDate": "2023"
     },
     {
       "institution": "IES Maestre de Calatrava, Ciudad Real",
       "url": "https://iesmaestredecalatrava.es/",
-      "area": "Técnico superior en desarrollo de aplicaciones multiplataforma",
-      "studyType": "Estudiante",
+      "area": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+      "studyType": "Ciclo formativo de grado superior",
       "startDate": "2017",
       "endDate": "2019"
     }
@@ -50,65 +57,248 @@
       "issuer": "The Linux Foundation"
     },
     {
-      "name": "Terraform Associate (003)",
+      "name": "HashiCorp Certified: Terraform Associate (003)",
       "date": "2024",
       "url": "https://developer.hashicorp.com/certifications/infrastructure-automation",
       "issuer": "HashiCorp"
     },
     {
-      "name": "New Relic Full Stack Observability Practitioner Certification",
+      "name": "New Relic Full Stack Observability Practitioner",
       "date": "2024",
       "url": "",
       "issuer": "New Relic"
     },
     {
-      "name": "Azure AI Fundamentals",
+      "name": "Microsoft Certified: Azure AI Fundamentals (AI-900)",
       "date": "2023",
-      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/",
       "issuer": "Microsoft"
     }
   ],
   "work": [
     {
       "name": "NTT Data",
-      "position": "IST - Process & System Technician",
+      "position": "AI Engineer · Plataformas de agentes & DevOps",
       "location_type": "Híbrido",
       "url": "https://www.linkedin.com/company/ntt-data-europe-latam",
       "startDate": "Septiembre 2023",
       "endDate": null,
-      "summary": "Ingeniero en DevOps y AIOps.",
+      "summary": "Puesto: IST – Process & System Technician. Empecé con automatizaciones backend en Python, pasé a DevOps, Cloud y observabilidad, y hoy diseño, construyo y llevo a producción plataformas de agentes de IA para casos de uso corporativos.",
       "responsibilities": [
-        "Trabajo en equipo empresarial.",
-        "Seguir metodología de trabajo ágil.",
-        "Desarrollo de automatizaciones.",
-        "Despliegue, gestión y mantenimiento de infraestructura de producción y preproducción usando IaC.",
-        "Desarrollo e integración de soluciones con inteligencia artificial.",
-        "Desarrollo de modelos de inteligencia artificial con machine learning."
+        "Arquitectura de una plataforma de agentes de IA corporativa con framework propio, modular e independiente del proveedor de modelos.",
+        "Framework propio de agentes: base común para crear agentes nuevos con las mismas garantías de seguridad, trazabilidad y despliegue.",
+        "Sistemas multi-agente: un orquestador coordina agentes especializados y reparte las tareas; los agentes se comunican con el estándar A2A (Agent-to-Agent).",
+        "Agentes con LangChain: tool calling, cadenas y flujos sobre LLMs.",
+        "MCP servers propios (Model Context Protocol) a medida de cada cliente, que exponen sus APIs, datos y sistemas internos como herramientas para los agentes.",
+        "RAG: pipelines de ingesta de documentos, chunking, embeddings y búsqueda vectorial sobre el conocimiento de la empresa.",
+        "Memoria de agentes a corto plazo (contexto de la conversación) y a largo plazo (información que debe persistir entre sesiones).",
+        "LLM Gateway como punto único de acceso a modelos: abstracción multi-proveedor, enrutado de modelos y control centralizado de uso.",
+        "Guardrails de seguridad para entornos corporativos: validación de entradas y salidas, detección de prompt injection, protección de datos sensibles y políticas de la empresa.",
+        "Skills: capacidades empaquetadas y reutilizables que los agentes cargan cuando las necesitan.",
+        "Prompt y context engineering para controlar qué contexto recibe cada agente y obtener respuestas consistentes.",
+        "Modelos en local con Ollama para desarrollo y pruebas.",
+        "Cada componente de la plataforma de IA (orquestador, agentes, LLM gateway, guardrails, RAG, memoria y MCP servers) desplegado como microservicio en su propio pod, con escalado horizontal independiente.",
+        "Despliegue y mantenimiento de clústeres Kubernetes y OpenShift en producción y preproducción sobre Microsoft Azure.",
+        "Recursos de Kubernetes por servicio: Deployments, Services, ConfigMaps, Secrets, health probes, límites de recursos y escalado automático.",
+        "Infraestructura como código con Terraform y gestión de configuración con Ansible.",
+        "Pipelines CI/CD para construir, probar y desplegar servicios e imágenes de contenedor.",
+        "Gestión de contenedores e imágenes Docker en entornos productivos.",
+        "Administración de servidores Linux, scripting en Bash y Nginx como servidor web y proxy inverso.",
+        "Monitorización de aplicaciones, servidores Linux y clústeres Kubernetes con New Relic: dashboards y alertas.",
+        "Autoremediaciones automáticas a partir de alertas de New Relic.",
+        "Instrumentación con OpenTelemetry: trazas, métricas y logs de servicios y de aplicaciones de IA, incluidas las llamadas de los agentes a modelos y herramientas.",
+        "Logging, métricas y trazabilidad para garantizar la estabilidad de los sistemas.",
+        "Herramientas de monitorización con AIOps.",
+        "Automatizaciones en Python para procesos de negocio e infraestructura.",
+        "Jobs y procesos programados con Rundeck y orquestación de flujos con Apache Airflow.",
+        "APIs REST y microservicios en Python sobre PostgreSQL.",
+        "Modelos de machine learning y redes neuronales con TensorFlow.",
+        "Desarrollo e integración de soluciones con inteligencia artificial en aplicaciones y procesos existentes.",
+        "IA generativa aplicada a procesos reales de negocio.",
+        "Desarrollo diario con agentes de código: Claude Code y OpenAI Codex.",
+        "Harness engineering: instrucciones de proyecto, skills, subagentes, hooks y MCP para que los agentes de código trabajen con autonomía y de forma fiable.",
+        "Verificación automática de lo que genera el agente con tests y linters.",
+        "Casos de uso completos: análisis con negocio, diseño de arquitectura, desarrollo, despliegue y operación.",
+        "Herramientas a medida para necesidades muy específicas de cliente gracias a MCP servers propios.",
+        "Preparado para montar una plataforma desde cero y coordinar a un equipo técnico en su construcción.",
+        "Trabajo en equipo con metodología ágil."
       ],
       "achievements": [
-        "Manejo y gestión de contenedores en entornos productivos.",
-        "Despliegue y mantenimiento de clúster de Kubernetes y aplicativos.",
-        "Desarrollo de automatizaciones para procesos generales.",
-        "Manejo de herramientas de monitorización con AIOps."
+        "Construcción de una plataforma de agentes de IA modular y escalable: orquestador, LLM gateway, guardrails, RAG, memoria y MCP servers desplegados como servicios independientes en Kubernetes.",
+        "Casos de uso end-to-end para cliente, desde el análisis con negocio hasta producción, con herramientas MCP desarrolladas a medida para necesidades muy específicas.",
+        "Despliegue y operación de clústeres Kubernetes y OpenShift en entornos productivos sobre Microsoft Azure.",
+        "Alertas y autoremediaciones con New Relic e instrumentación de servicios y agentes con OpenTelemetry.",
+        "Desarrollo con agentes de código (Claude Code, Codex) integrado en mi flujo de trabajo diario.",
+        "Automatización de procesos generales con Python, Rundeck y Apache Airflow."
       ],
       "skills": {
+        "Agentic AI": "mdi:robot-outline",
+        "LangChain": "simple-icons:langchain",
+        "MCP": "mdi:hub-outline",
+        "A2A": "mdi:transit-connection-variant",
+        "RAG": "mdi:database-search-outline",
+        "LLM Gateway": "mdi:router-network",
+        "Guardrails": "mdi:shield-check-outline",
+        "Claude Code": "simple-icons:claude",
+        "Codex": "simple-icons:openai",
         "Python": "simple-icons:python",
         "Kubernetes": "simple-icons:kubernetes",
+        "OpenShift": "simple-icons:redhatopenshift",
         "Docker": "simple-icons:docker",
         "Terraform": "simple-icons:terraform",
-        "Tensorflow": "simple-icons:tensorflow",
+        "Ansible": "simple-icons:ansible",
+        "CI/CD": "mdi:source-branch",
+        "Azure": "simple-icons:microsoftazure",
+        "OpenTelemetry": "simple-icons:opentelemetry",
+        "New Relic": "simple-icons:newrelic",
         "Ollama": "simple-icons:ollama",
+        "TensorFlow": "simple-icons:tensorflow",
         "Rundeck": "simple-icons:rundeck",
         "Apache Airflow": "simple-icons:apacheairflow",
-        "Ansible": "simple-icons:ansible",
-        "Newrelic": "simple-icons:newrelic",
-        "Azure": "simple-icons:microsoft",
-        "Nginx": "simple-icons:nginx",
-        "Linux": "simple-icons:linux",
-        "API Rest": "simple-icons:flask",
         "PostgreSQL": "simple-icons:postgresql",
+        "Linux": "simple-icons:linux",
         "Git": "mdi:git"
-      }
+      },
+      "phases": [
+        {
+          "name": "Backend y automatización",
+          "period": "Desde septiembre de 2023",
+          "summary": "Automatizaciones en Python, APIs y procesos programados.",
+          "tech": [
+            "Python",
+            "API REST",
+            "Rundeck",
+            "Apache Airflow",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "name": "DevOps y Cloud",
+          "period": "",
+          "summary": "Clústeres Kubernetes y OpenShift en producción sobre Azure, IaC y pipelines CI/CD.",
+          "tech": [
+            "Kubernetes",
+            "OpenShift",
+            "Docker",
+            "Terraform",
+            "Ansible",
+            "CI/CD",
+            "Azure",
+            "Linux"
+          ]
+        },
+        {
+          "name": "Observabilidad y AIOps",
+          "period": "",
+          "summary": "Alertas, dashboards y autoremediaciones con New Relic; instrumentación con OpenTelemetry.",
+          "tech": [
+            "New Relic",
+            "OpenTelemetry"
+          ]
+        },
+        {
+          "name": "Machine learning e IA generativa",
+          "period": "",
+          "summary": "Redes neuronales con TensorFlow y, después, IA generativa aplicada a procesos de negocio.",
+          "tech": [
+            "TensorFlow",
+            "Ollama",
+            "LangChain"
+          ]
+        },
+        {
+          "name": "Agentic AI y plataformas de agentes",
+          "period": "Hoy",
+          "summary": "Plataforma de agentes con framework propio, MCP servers propios, A2A, RAG, memoria, LLM gateway, guardrails y skills, cada componente en su pod.",
+          "tech": [
+            "LangChain",
+            "MCP",
+            "A2A",
+            "RAG",
+            "LLM Gateway",
+            "Guardrails",
+            "Claude Code",
+            "Codex",
+            "Kubernetes",
+            "OpenTelemetry"
+          ]
+        }
+      ],
+      "areas": [
+        {
+          "name": "Agentes de IA y plataforma agéntica",
+          "icon": "mdi:robot-outline",
+          "items": [
+            "Arquitectura de una plataforma de agentes de IA corporativa con framework propio, modular e independiente del proveedor de modelos.",
+            "Framework propio de agentes: base común para crear agentes nuevos con las mismas garantías de seguridad, trazabilidad y despliegue.",
+            "Sistemas multi-agente: un orquestador coordina agentes especializados y reparte las tareas; los agentes se comunican con el estándar A2A (Agent-to-Agent).",
+            "Agentes con LangChain: tool calling, cadenas y flujos sobre LLMs.",
+            "MCP servers propios (Model Context Protocol) a medida de cada cliente, que exponen sus APIs, datos y sistemas internos como herramientas para los agentes.",
+            "RAG: pipelines de ingesta de documentos, chunking, embeddings y búsqueda vectorial sobre el conocimiento de la empresa.",
+            "Memoria de agentes a corto plazo (contexto de la conversación) y a largo plazo (información que debe persistir entre sesiones).",
+            "LLM Gateway como punto único de acceso a modelos: abstracción multi-proveedor, enrutado de modelos y control centralizado de uso.",
+            "Guardrails de seguridad para entornos corporativos: validación de entradas y salidas, detección de prompt injection, protección de datos sensibles y políticas de la empresa.",
+            "Skills: capacidades empaquetadas y reutilizables que los agentes cargan cuando las necesitan.",
+            "Prompt y context engineering para controlar qué contexto recibe cada agente y obtener respuestas consistentes.",
+            "Modelos en local con Ollama para desarrollo y pruebas."
+          ]
+        },
+        {
+          "name": "Plataforma, Kubernetes y DevOps",
+          "icon": "mdi:all-inclusive",
+          "items": [
+            "Cada componente de la plataforma de IA (orquestador, agentes, LLM gateway, guardrails, RAG, memoria y MCP servers) desplegado como microservicio en su propio pod, con escalado horizontal independiente.",
+            "Despliegue y mantenimiento de clústeres Kubernetes y OpenShift en producción y preproducción sobre Microsoft Azure.",
+            "Recursos de Kubernetes por servicio: Deployments, Services, ConfigMaps, Secrets, health probes, límites de recursos y escalado automático.",
+            "Infraestructura como código con Terraform y gestión de configuración con Ansible.",
+            "Pipelines CI/CD para construir, probar y desplegar servicios e imágenes de contenedor.",
+            "Gestión de contenedores e imágenes Docker en entornos productivos.",
+            "Administración de servidores Linux, scripting en Bash y Nginx como servidor web y proxy inverso."
+          ]
+        },
+        {
+          "name": "Observabilidad y operación",
+          "icon": "mdi:eye-outline",
+          "items": [
+            "Monitorización de aplicaciones, servidores Linux y clústeres Kubernetes con New Relic: dashboards y alertas.",
+            "Autoremediaciones automáticas a partir de alertas de New Relic.",
+            "Instrumentación con OpenTelemetry: trazas, métricas y logs de servicios y de aplicaciones de IA, incluidas las llamadas de los agentes a modelos y herramientas.",
+            "Logging, métricas y trazabilidad para garantizar la estabilidad de los sistemas.",
+            "Herramientas de monitorización con AIOps."
+          ]
+        },
+        {
+          "name": "Automatización, backend y machine learning",
+          "icon": "mdi:script-text-outline",
+          "items": [
+            "Automatizaciones en Python para procesos de negocio e infraestructura.",
+            "Jobs y procesos programados con Rundeck y orquestación de flujos con Apache Airflow.",
+            "APIs REST y microservicios en Python sobre PostgreSQL.",
+            "Modelos de machine learning y redes neuronales con TensorFlow.",
+            "Desarrollo e integración de soluciones con inteligencia artificial en aplicaciones y procesos existentes.",
+            "IA generativa aplicada a procesos reales de negocio."
+          ]
+        },
+        {
+          "name": "Desarrollo con agentes de código",
+          "icon": "mdi:console",
+          "items": [
+            "Desarrollo diario con agentes de código: Claude Code y OpenAI Codex.",
+            "Harness engineering: instrucciones de proyecto, skills, subagentes, hooks y MCP para que los agentes de código trabajen con autonomía y de forma fiable.",
+            "Verificación automática de lo que genera el agente con tests y linters."
+          ]
+        },
+        {
+          "name": "Casos de uso y forma de trabajo",
+          "icon": "mdi:account-tie-outline",
+          "items": [
+            "Casos de uso completos: análisis con negocio, diseño de arquitectura, desarrollo, despliegue y operación.",
+            "Herramientas a medida para necesidades muy específicas de cliente gracias a MCP servers propios.",
+            "Preparado para montar una plataforma desde cero y coordinar a un equipo técnico en su construcción.",
+            "Trabajo en equipo con metodología ágil."
+          ]
+        }
+      ]
     },
     {
       "name": "NTT Data",
@@ -117,47 +307,46 @@
       "url": "https://www.linkedin.com/company/ntt-data-europe-latam",
       "startDate": "Marzo 2023",
       "endDate": "Julio 2023",
-      "summary": "Prácticas de universidad de grado en Ingeniería Informática y desarrollo de TFG Full-stack.",
+      "summary": "Prácticas del Grado en Ingeniería Informática y desarrollo de TFG full-stack con microservicios.",
       "responsibilities": [
-        "Trabajo en equipo empresarial.",
-        "Seguir metodología de trabajo ágil.",
-        "Desarrollo de automatizaciones.",
-        "Gestión de infraestructura usando IaC."
+        "Trabajo en equipo con metodología ágil.",
+        "Desarrollo de automatizaciones en Python.",
+        "Gestión de infraestructura con IaC (Terraform, Pulumi, Ansible)."
       ],
       "achievements": [
-        "Planificación, desarrollo e implantación de TFG Full-stack con microservicios.",
-        "Aprendido el manejo y gestión de contenedores en entornos productivos.",
-        "Aprendido el desarrollo de automatizaciones para procesos generales."
+        "Planificación, desarrollo e implantación de un TFG full-stack con arquitectura de microservicios.",
+        "Primer contacto con contenedores y Kubernetes en entornos productivos.",
+        "Desarrollo de automatizaciones para procesos generales."
       ],
       "skills": {
         "Python": "simple-icons:python",
         "Kubernetes": "simple-icons:kubernetes",
         "Docker": "simple-icons:docker",
         "Terraform": "simple-icons:terraform",
-        "Rundeck": "simple-icons:rundeck",
-        "Ansible": "simple-icons:ansible",
         "Pulumi": "simple-icons:pulumi",
+        "Ansible": "simple-icons:ansible",
+        "Rundeck": "simple-icons:rundeck",
         "React": "simple-icons:react",
-        "Javascript": "simple-icons:javascript",
-        "Azure": "simple-icons:microsoft",
+        "JavaScript": "simple-icons:javascript",
+        "Azure": "simple-icons:microsoftazure",
         "Nginx": "simple-icons:nginx",
         "Linux": "simple-icons:linux",
-        "API Rest": "simple-icons:flask",
+        "API REST": "mdi:api",
         "PostgreSQL": "simple-icons:postgresql",
         "Git": "mdi:git"
       }
     },
     {
-      "name": "Cooperativa San Isidro Labrado, Las Labores",
-      "position": "Encargado Informático",
+      "name": "Cooperativa San Isidro Labrador, Las Labores",
+      "position": "Encargado informático",
       "location_type": "Presencial",
       "url": "",
       "startDate": "Septiembre 2022",
       "endDate": "Septiembre 2022",
-      "summary": "Encargado del sistema para obtener el grado de alcohol la uva y del sistema informático de tickets.",
+      "summary": "Responsable del sistema de medición del grado alcohólico de la uva y del sistema informático de tickets durante la campaña de vendimia.",
       "responsibilities": [
-        "Obtener grado de alcohol de la uva.",
-        "Procesar tickets de referencia a la cosecha de uva con sistema informático."
+        "Medición del grado alcohólico de la uva.",
+        "Gestión de los tickets de la cosecha en el sistema informático."
       ]
     },
     {
@@ -167,15 +356,13 @@
       "url": "https://www.telefonica.com/es/",
       "startDate": "Abril 2019",
       "endDate": "Junio 2019",
-      "summary": "Prácticas de técnico superior en desarrollo de aplicaciones multiplataforna.",
+      "summary": "Prácticas del ciclo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.",
       "responsibilities": [
         "Trabajo en equipo.",
-        "Desarrollo de herramientas web internas.",
-        "Integración de herramientas web internas."
+        "Desarrollo e integración de herramientas web internas."
       ],
       "achievements": [
-        "Diseño de herramientas web.",
-        "Desarrollo de herramientas web internas."
+        "Diseño y desarrollo de herramientas web internas."
       ],
       "skills": {
         "HTML": "simple-icons:html5",
@@ -188,13 +375,160 @@
   ],
   "skills": [
     {
-      "name": "Python",
-      "icon": "simple-icons:python",
+      "name": "Agentic AI",
+      "icon": "mdi:robot-outline",
       "level": "",
       "keywords": [
-        "Virtual Environments",
-        "Backend",
-        "Development"
+        "Agentes de IA",
+        "Tool calling",
+        "Planificación",
+        "Agentes autónomos"
+      ]
+    },
+    {
+      "name": "Sistemas multi-agente",
+      "icon": "mdi:account-group-outline",
+      "level": "",
+      "keywords": [
+        "Orquestación",
+        "Delegación de tareas",
+        "A2A"
+      ]
+    },
+    {
+      "name": "LangChain",
+      "icon": "simple-icons:langchain",
+      "level": "",
+      "keywords": [
+        "Agentes",
+        "Chains",
+        "Tools"
+      ]
+    },
+    {
+      "name": "MCP (Model Context Protocol)",
+      "icon": "mdi:hub-outline",
+      "level": "",
+      "keywords": [
+        "MCP servers propios",
+        "Tools",
+        "Integración de sistemas"
+      ]
+    },
+    {
+      "name": "A2A (Agent-to-Agent)",
+      "icon": "mdi:transit-connection-variant",
+      "level": "",
+      "keywords": [
+        "Interoperabilidad",
+        "Multi-agente",
+        "Estándares"
+      ]
+    },
+    {
+      "name": "RAG",
+      "icon": "mdi:database-search-outline",
+      "level": "",
+      "keywords": [
+        "Embeddings",
+        "Chunking",
+        "Búsqueda vectorial"
+      ]
+    },
+    {
+      "name": "Memoria de agentes",
+      "icon": "mdi:memory",
+      "level": "",
+      "keywords": [
+        "Corto plazo",
+        "Largo plazo",
+        "Estado"
+      ]
+    },
+    {
+      "name": "LLM Gateway",
+      "icon": "mdi:router-network",
+      "level": "",
+      "keywords": [
+        "Multi-proveedor",
+        "Enrutado de modelos",
+        "Control de uso"
+      ]
+    },
+    {
+      "name": "AI Guardrails",
+      "icon": "mdi:shield-check-outline",
+      "level": "",
+      "keywords": [
+        "Prompt injection",
+        "Datos sensibles",
+        "Validación de entradas y salidas"
+      ]
+    },
+    {
+      "name": "Prompt & Context Engineering",
+      "icon": "mdi:head-cog-outline",
+      "level": "",
+      "keywords": [
+        "Prompting",
+        "Gestión de contexto",
+        "Salidas estructuradas"
+      ]
+    },
+    {
+      "name": "Agent Skills",
+      "icon": "mdi:puzzle-outline",
+      "level": "",
+      "keywords": [
+        "Capacidades reutilizables",
+        "Extensibilidad"
+      ]
+    },
+    {
+      "name": "Harness Engineering",
+      "icon": "mdi:wrench-cog-outline",
+      "level": "",
+      "keywords": [
+        "Agentes de código",
+        "Skills",
+        "Subagentes",
+        "Hooks"
+      ]
+    },
+    {
+      "name": "Claude Code",
+      "icon": "simple-icons:claude",
+      "level": "",
+      "keywords": [
+        "Desarrollo con IA",
+        "Agentes de código"
+      ]
+    },
+    {
+      "name": "OpenAI Codex",
+      "icon": "simple-icons:openai",
+      "level": "",
+      "keywords": [
+        "Desarrollo con IA",
+        "Agentes de código"
+      ]
+    },
+    {
+      "name": "Ollama",
+      "icon": "simple-icons:ollama",
+      "level": "",
+      "keywords": [
+        "LLMs locales",
+        "GenAI"
+      ]
+    },
+    {
+      "name": "TensorFlow",
+      "icon": "simple-icons:tensorflow",
+      "level": "",
+      "keywords": [
+        "Machine Learning",
+        "Redes neuronales"
       ]
     },
     {
@@ -202,9 +536,28 @@
       "icon": "simple-icons:kubernetes",
       "level": "",
       "keywords": [
-        "Containers",
-        "Backend",
-        "Microservices"
+        "Contenedores",
+        "Microservicios",
+        "Escalado horizontal",
+        "Helm"
+      ]
+    },
+    {
+      "name": "OpenShift",
+      "icon": "simple-icons:redhatopenshift",
+      "level": "",
+      "keywords": [
+        "Kubernetes empresarial",
+        "Contenedores"
+      ]
+    },
+    {
+      "name": "Docker",
+      "icon": "simple-icons:docker",
+      "level": "",
+      "keywords": [
+        "Contenedores",
+        "Imágenes"
       ]
     },
     {
@@ -213,46 +566,8 @@
       "level": "",
       "keywords": [
         "IaC",
-        "Infraestructure",
+        "Infrastructure",
         "DevOps"
-      ]
-    },
-    {
-      "name": "Docker",
-      "icon": "mdi:docker",
-      "level": "",
-      "keywords": [
-        "Virtual Environments",
-        "Backend"
-      ]
-    },
-    {
-      "name": "Tensorflow",
-      "icon": "simple-icons:tensorflow",
-      "level": "",
-      "keywords": [
-        "AI",
-        "Machine Learning"
-      ]
-    },
-    {
-      "name": "Ollama",
-      "icon": "simple-icons:ollama",
-      "level": "",
-      "keywords": [
-        "AI",
-        "Machine Learning",
-        "GenAI",
-        "AIOps"
-      ]
-    },
-    {
-      "name": "Rundeck",
-      "icon": "simple-icons:rundeck",
-      "level": "",
-      "keywords": [
-        "DevOps",
-        "Jobs"
       ]
     },
     {
@@ -260,7 +575,36 @@
       "icon": "simple-icons:ansible",
       "level": "",
       "keywords": [
-        "DevOps"
+        "Gestión de configuración",
+        "Automatización"
+      ]
+    },
+    {
+      "name": "CI/CD",
+      "icon": "mdi:source-branch",
+      "level": "",
+      "keywords": [
+        "Pipelines",
+        "Despliegues automatizados"
+      ]
+    },
+    {
+      "name": "Azure",
+      "icon": "simple-icons:microsoftazure",
+      "level": "",
+      "keywords": [
+        "Cloud",
+        "Microsoft"
+      ]
+    },
+    {
+      "name": "OpenTelemetry",
+      "icon": "simple-icons:opentelemetry",
+      "level": "",
+      "keywords": [
+        "Trazas",
+        "Métricas",
+        "Logs"
       ]
     },
     {
@@ -268,95 +612,29 @@
       "icon": "simple-icons:newrelic",
       "level": "",
       "keywords": [
-        "Monitoring"
+        "Monitorización",
+        "Alertas",
+        "Autoremediación"
       ]
     },
     {
-      "name": "Azure",
-      "icon": "simple-icons:microsoft",
+      "name": "Python",
+      "icon": "simple-icons:python",
       "level": "",
       "keywords": [
-        "Azure",
-        "Cloud",
-        "Microsoft"
+        "Backend",
+        "Automatización",
+        "IA"
       ]
     },
     {
-      "name": "API Rest",
-      "icon": "simple-icons:flask",
+      "name": "API REST",
+      "icon": "mdi:api",
       "level": "",
       "keywords": [
-        "API",
-        "API Rest",
+        "APIs",
+        "Microservicios",
         "Backend"
-      ]
-    },
-    {
-      "name": "Apache Airflow",
-      "icon": "simple-icons:apacheairflow",
-      "level": "",
-      "keywords": [
-        "DevOps"
-      ]
-    },
-    {
-      "name": "Java",
-      "icon": "simple-icons:coffeescript",
-      "level": "",
-      "keywords": [
-        "Backend",
-        "Development"
-      ]
-    },
-    {
-      "name": "HTML",
-      "icon": "simple-icons:html5",
-      "level": "",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
-    },
-    {
-      "name": "CSS",
-      "icon": "ri:css3-fill",
-      "level": "",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "JavaScript",
-      "icon": "simple-icons:javascript",
-      "level": "",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
-    },
-    {
-      "name": "Git",
-      "icon": "mdi:git",
-      "level": "",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "icon": "mdi:github",
-      "level": "",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
       ]
     },
     {
@@ -364,52 +642,18 @@
       "icon": "simple-icons:postgresql",
       "level": "",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "SSR",
-        "Static Generation"
+        "Base de datos",
+        "SQL",
+        "Backend"
       ]
     },
     {
-      "name": "React",
-      "icon": "mdi:react",
+      "name": "Linux",
+      "icon": "simple-icons:linux",
       "level": "",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
-    },
-    {
-      "name": "Vite",
-      "icon": "simple-icons:vite",
-      "level": "",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Build Tool"
-      ]
-    },
-    {
-      "name": "Astro",
-      "icon": "simple-icons:astro",
-      "level": "",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "Nginx",
-      "icon": "simple-icons:nginx",
-      "level": "",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "Web Server"
+        "Sistemas",
+        "Administración"
       ]
     },
     {
@@ -418,17 +662,113 @@
       "level": "",
       "keywords": [
         "Scripting",
-        "Automation"
+        "Automatización"
       ]
     },
     {
-      "name": "Linux",
-      "icon": "simple-icons:linux",
+      "name": "Nginx",
+      "icon": "simple-icons:nginx",
       "level": "",
       "keywords": [
-        "OS",
-        "Scripting",
-        "Automation"
+        "Servidor web",
+        "Proxy inverso"
+      ]
+    },
+    {
+      "name": "Rundeck",
+      "icon": "simple-icons:rundeck",
+      "level": "",
+      "keywords": [
+        "Jobs",
+        "Automatización"
+      ]
+    },
+    {
+      "name": "Apache Airflow",
+      "icon": "simple-icons:apacheairflow",
+      "level": "",
+      "keywords": [
+        "Orquestación de flujos",
+        "Automatización"
+      ]
+    },
+    {
+      "name": "Git",
+      "icon": "mdi:git",
+      "level": "",
+      "keywords": [
+        "Control de versiones"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "icon": "mdi:github",
+      "level": "",
+      "keywords": [
+        "Control de versiones",
+        "Colaboración"
+      ]
+    },
+    {
+      "name": "Java",
+      "icon": "simple-icons:openjdk",
+      "level": "",
+      "keywords": [
+        "Backend",
+        "POO"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "icon": "simple-icons:javascript",
+      "level": "",
+      "keywords": [
+        "Frontend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "React",
+      "icon": "mdi:react",
+      "level": "",
+      "keywords": [
+        "Frontend",
+        "UI"
+      ]
+    },
+    {
+      "name": "Astro",
+      "icon": "simple-icons:astro",
+      "level": "",
+      "keywords": [
+        "Frontend",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "Vite",
+      "icon": "simple-icons:vite",
+      "level": "",
+      "keywords": [
+        "Frontend",
+        "Build Tool"
+      ]
+    },
+    {
+      "name": "HTML",
+      "icon": "simple-icons:html5",
+      "level": "",
+      "keywords": [
+        "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "icon": "ri:css3-fill",
+      "level": "",
+      "keywords": [
+        "Frontend",
+        "Responsive Design"
       ]
     }
   ],
@@ -438,132 +778,340 @@
       "fluency": "Nativo"
     },
     {
-      "language": "English",
-      "fluency": "Básico"
+      "language": "Inglés",
+      "fluency": "Lectura técnica fluida, conversación básica"
     }
   ],
   "interests": [
     {
-      "name": "Technology",
+      "name": "Agentic AI",
       "keywords": [
-        "AI"
+        "Sistemas multi-agente",
+        "MCP",
+        "A2A",
+        "Estándares abiertos"
+      ]
+    },
+    {
+      "name": "Desarrollo con IA",
+      "keywords": [
+        "Agentes de código",
+        "Harness engineering"
+      ]
+    },
+    {
+      "name": "Platform Engineering",
+      "keywords": [
+        "Kubernetes",
+        "Infraestructura como código",
+        "Observabilidad"
       ]
     }
   ],
   "techexp": [
     {
-      "name": "DevOps",
+      "name": "Agentic AI y plataformas de agentes",
+      "icon": "mdi:robot-outline",
+      "isActive": true,
+      "highlights": [
+        "Arquitectura de plataformas de agentes de IA para empresa con framework propio, modulares e independientes del proveedor de modelos.",
+        "Sistemas multi-agente: orquestación, delegación de tareas y comunicación entre agentes con el estándar A2A.",
+        "MCP servers propios para conectar agentes con las APIs, datos y sistemas internos de cada cliente.",
+        "RAG: ingesta de documentos, chunking, embeddings y búsqueda vectorial sobre conocimiento corporativo.",
+        "Memoria de agentes a corto y largo plazo para mantener el contexto entre conversaciones y tareas.",
+        "LLM Gateway: punto único de acceso a modelos con enrutado multi-proveedor y control de uso.",
+        "Guardrails de seguridad: validación de entradas y salidas, prompt injection y datos sensibles.",
+        "Skills reutilizables que amplían las capacidades de los agentes sin tocar su núcleo."
+      ]
+    },
+    {
+      "name": "Desarrollo con agentes de código",
+      "icon": "mdi:console",
+      "isActive": true,
+      "highlights": [
+        "Desarrollo diario con agentes de código: Claude Code y OpenAI Codex.",
+        "Harness engineering: instrucciones de proyecto, skills, subagentes, hooks y MCP para que el agente trabaje con autonomía y de forma fiable.",
+        "Prompt y context engineering para obtener resultados consistentes.",
+        "Revisión y verificación automática de lo que genera el agente con tests y linters."
+      ]
+    },
+    {
+      "name": "Platform Engineering y DevOps",
       "icon": "mdi:all-inclusive",
       "isActive": true,
       "highlights": [
-        "Despliegue de plataformas para cluster de kubernetes en entornos productivos.",
-        "Implementación de pipelines de CI/CD.",
-        "Automatización de despliegues y gestión de infraestructuras con Terraform y Ansible.",
-        "Manejo y gestión de imagenes y contenedores en entornos productivos.",
-        "Manejo y gestión de aplicaciones en contenedores productivos."
+        "Cada componente de la plataforma de IA como servicio independiente en su propio pod, con escalado horizontal por componente.",
+        "Despliegue y mantenimiento de clústeres Kubernetes y OpenShift en producción sobre Microsoft Azure.",
+        "Despliegue de plataformas y aplicativos en clústeres Kubernetes de producción.",
+        "Infraestructura como código con Terraform y Ansible.",
+        "Pipelines CI/CD y automatización de despliegues.",
+        "Gestión de imágenes y contenedores en entornos productivos."
       ]
     },
     {
-      "name": "Inteligencia Artificial",
-      "icon": "mdi:brain",
-      "isActive": true,
-      "highlights": [
-        "Diseño y desarrollo de agentes de inteligencia artificial con Langchain.",
-        "Diseño y desarrollo de modelos de aprendizaje automático.",
-        "Desarrollo de soluciones con Python y librerías de IA avanzadas.",
-        "Integración de tecnologías de inteligencia artificial para soluciones avanzadas."
-      ]
-    },
-    {
-      "name": "Monitorización y observabilidad",
+      "name": "Observabilidad",
       "icon": "mdi:eye-outline",
       "isActive": true,
       "highlights": [
-        "Implementación de sistemas de monitorización de aplicaciones y servicios en entornos Linux y cluster de Kubernetes con New Relic.",
-        "Experiencia en herramientas de logging, métricas y trazabilidad para garantizar la estabilidad del sistema con New Relic.",
-        "Automatización de alertas y dashboards usando New Relic.",
-        "Implementación de sistemas de monitorización en aplicaciones de inteligencia artificial."
+        "Monitorización de aplicaciones, servidores Linux y clústeres Kubernetes con New Relic.",
+        "Alertas, dashboards y autoremediaciones automatizadas.",
+        "Instrumentación con OpenTelemetry: trazas, métricas y logs de servicios y de aplicaciones de IA.",
+        "Logging, métricas y trazabilidad para garantizar la estabilidad de los sistemas.",
+        "Monitorización de aplicaciones de inteligencia artificial."
       ]
     },
     {
-      "name": "Desarrollo de software backend",
+      "name": "Machine learning e IA generativa",
+      "icon": "mdi:brain",
+      "isActive": true,
+      "highlights": [
+        "Diseño y desarrollo de modelos de aprendizaje automático y redes neuronales con TensorFlow.",
+        "Desarrollo de soluciones con Python y librerías de IA.",
+        "Integración de IA generativa en procesos reales de negocio.",
+        "LLMs en local con Ollama para desarrollo y pruebas."
+      ]
+    },
+    {
+      "name": "Backend y automatización",
       "icon": "mdi:script-text-outline",
       "isActive": true,
       "highlights": [
-        "Diseño y desarrollo de APIs y servicios escalables.",
+        "Automatizaciones en Python para procesos de negocio e infraestructura.",
+        "Diseño y desarrollo de APIs, servicios escalables y microservicios en Python.",
+        "Programación avanzada en Python.",
         "Gestión eficiente de bases de datos y lógica de negocio.",
-        "Diseño y desarrollo de automatizaciones en python.",
-        "Diseño y desarrollo de microservicios en python.",
-        "Programación avanzada con Python.",
-        "Programación base en Java y C#."
+        "Base en Java y C#."
       ]
     },
     {
-      "name": "Desarrollo de software frontend",
+      "name": "Casos de uso y liderazgo técnico",
+      "icon": "mdi:account-tie-outline",
+      "isActive": true,
+      "highlights": [
+        "Casos de uso completos: análisis con negocio, arquitectura, desarrollo, despliegue y operación.",
+        "Herramientas a medida para necesidades muy específicas de cliente gracias a MCP servers propios.",
+        "Preparado para montar una plataforma desde cero y coordinar a un equipo técnico en su construcción."
+      ]
+    },
+    {
+      "name": "Frontend",
       "icon": "mdi:application-outline",
       "isActive": true,
       "highlights": [
-        "Uso de tecnologías básicas como HTML, CSS y Javascript.",
-        "Uso de frameworks modernos como React y Astro.",
-        "Integración con APIs backend y optimización de la experiencia de usuario."
+        "HTML, CSS y JavaScript.",
+        "Frameworks modernos como React y Astro.",
+        "Integración con APIs backend y cuidado de la experiencia de usuario."
       ]
     }
   ],
   "projects": [
     {
+      "name": "Plataforma de agentes de IA",
+      "category": "profesional",
+      "context": "NTT Data · hoy",
+      "isActive": false,
+      "description": "Plataforma corporativa para construir y operar agentes de IA, con framework propio y cada componente desplegado como servicio independiente en Kubernetes.",
+      "highlights": [
+        "Orquestación multi-agente con A2A",
+        "MCP servers propios por cliente",
+        "RAG, memoria, LLM gateway y guardrails",
+        "Observabilidad con OpenTelemetry"
+      ],
+      "tags": [
+        "LangChain",
+        "MCP",
+        "A2A",
+        "RAG",
+        "Kubernetes",
+        "OpenTelemetry"
+      ],
+      "url": ""
+    },
+    {
+      "name": "MCP servers a medida",
+      "category": "profesional",
+      "context": "NTT Data · hoy",
+      "isActive": false,
+      "description": "Servidores MCP propios que exponen a los agentes las APIs, datos y sistemas internos de cada cliente, con control de qué puede hacer cada herramienta.",
+      "highlights": [
+        "Herramientas para casos de uso muy específicos",
+        "Código propio, sin depender de integraciones cerradas",
+        "Desplegados como pods independientes"
+      ],
+      "tags": [
+        "MCP",
+        "Python",
+        "Kubernetes"
+      ],
+      "url": ""
+    },
+    {
+      "name": "Observabilidad y autoremediación",
+      "category": "profesional",
+      "context": "NTT Data",
+      "isActive": false,
+      "description": "Monitorización de aplicaciones, servidores Linux y clústeres Kubernetes con alertas que disparan autoremediaciones, e instrumentación con OpenTelemetry.",
+      "highlights": [
+        "Dashboards y alertas en New Relic",
+        "Autoremediaciones automáticas",
+        "Trazas, métricas y logs con OpenTelemetry"
+      ],
+      "tags": [
+        "New Relic",
+        "OpenTelemetry",
+        "Kubernetes",
+        "Linux"
+      ],
+      "url": ""
+    },
+    {
+      "name": "Clústeres Kubernetes en Azure con IaC",
+      "category": "profesional",
+      "context": "NTT Data",
+      "isActive": false,
+      "description": "Despliegue y mantenimiento de clústeres Kubernetes y OpenShift en producción y preproducción, con infraestructura como código y pipelines CI/CD.",
+      "highlights": [
+        "Terraform y Ansible",
+        "Pipelines CI/CD",
+        "Producción y preproducción sobre Azure"
+      ],
+      "tags": [
+        "Kubernetes",
+        "OpenShift",
+        "Terraform",
+        "Ansible",
+        "Azure"
+      ],
+      "url": ""
+    },
+    {
+      "name": "TFG full-stack con microservicios",
+      "category": "academico",
+      "context": "NTT Data · 2023",
+      "isActive": false,
+      "description": "Trabajo de Fin de Grado desarrollado durante las prácticas: planificación, desarrollo e implantación de una aplicación full-stack con arquitectura de microservicios.",
+      "highlights": [
+        "Prácticas del Grado en Ingeniería Informática",
+        "Microservicios, contenedores e IaC"
+      ],
+      "tags": [
+        "Python",
+        "React",
+        "Docker",
+        "Kubernetes",
+        "Pulumi"
+      ],
+      "url": ""
+    },
+    {
       "name": "Iceflix",
       "isActive": true,
-      "description": "Sistema distribuido de streaming basado en microservicios",
+      "description": "Sistema distribuido de streaming basado en microservicios.",
       "highlights": [
-        "Creado en el grado en ingeniería informática",
-        "Desarrollado con Python, ZeroC Ice y ZeroC IceStorm"
+        "Proyecto del Grado en Ingeniería Informática",
+        "Python, ZeroC Ice y ZeroC IceStorm"
       ],
       "url": "https://github.com/Diego303/Iceflix",
-      "github": "https://github.com/Diego303/Iceflix"
+      "github": "https://github.com/Diego303/Iceflix",
+      "category": "academico",
+      "context": "Grado en Ingeniería Informática",
+      "tags": [
+        "Python",
+        "ZeroC Ice",
+        "IceStorm"
+      ]
     },
     {
       "name": "Infoge",
       "isActive": true,
-      "description": "Herramienta sobre información de localizaciones usando APIs de Mapas y de Twitter",
+      "description": "Herramienta de información sobre localizaciones con APIs de mapas y de Twitter.",
       "highlights": [
-        "Creado en el grado en ingeniería informática",
-        "Desarrollado con Python, y APIs"
+        "Proyecto del Grado en Ingeniería Informática",
+        "Python y APIs externas"
       ],
       "url": "https://github.com/Diego303/Infoge",
-      "github": "https://github.com/Diego303/Infoge"
+      "github": "https://github.com/Diego303/Infoge",
+      "category": "academico",
+      "context": "Grado en Ingeniería Informática",
+      "tags": [
+        "Python",
+        "APIs"
+      ]
     },
     {
-      "name": "Video interactivo",
+      "name": "Vídeo interactivo",
       "isActive": true,
-      "description": "Vídeo donde el usuario puede interaccionar con varios elementos",
+      "description": "Vídeo en el que el usuario interactúa con varios elementos.",
       "highlights": [
-        "Creado en el grado en ingeniería informática",
-        "Desarrollado con Angular"
+        "Proyecto del Grado en Ingeniería Informática",
+        "Angular"
       ],
       "url": "https://github.com/Diego303/Video-Interactivo",
-      "github": "https://github.com/Diego303/Video-Interactivo"
+      "github": "https://github.com/Diego303/Video-Interactivo",
+      "category": "academico",
+      "context": "Grado en Ingeniería Informática",
+      "tags": [
+        "Angular"
+      ]
     },
     {
       "name": "Shoppy",
       "isActive": true,
-      "description": "Proyecto de tienda temática",
+      "description": "Tienda temática.",
       "highlights": [
-        "Creado en el grado en ingeniería informática",
-        "Desarrollado con tecnología UWP y C#"
+        "Proyecto del Grado en Ingeniería Informática",
+        "UWP y C#"
       ],
       "url": "https://github.com/Diego303/Shoppy",
-      "github": "https://github.com/Diego303/Shoppy"
+      "github": "https://github.com/Diego303/Shoppy",
+      "category": "academico",
+      "context": "Grado en Ingeniería Informática",
+      "tags": [
+        "C#",
+        "UWP"
+      ]
     },
     {
       "name": "ERP",
       "isActive": true,
-      "description": "Proyecto de planificación de recursos empresariales en C#",
+      "description": "Planificación de recursos empresariales en C#.",
       "highlights": [
-        "Creado en el modulo técnico superior en desarrollo de aplicaciones multiplataforma",
-        "Desarrollado con C#"
+        "Proyecto del ciclo de Desarrollo de Aplicaciones Multiplataforma",
+        "C#"
       ],
       "url": "https://github.com/Diego303/ERP-DAM",
-      "github": "hhttps://github.com/Diego303/ERP-DAM"
+      "github": "https://github.com/Diego303/ERP-DAM",
+      "category": "academico",
+      "context": "Ciclo DAM",
+      "tags": [
+        "C#"
+      ]
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Capacidad de aprendizaje",
+      "description": "De backend a DevOps, de DevOps a machine learning y de ahí a agentes de IA en algo más de tres años."
+    },
+    {
+      "name": "Orientación a resultados",
+      "description": "Llevo los casos de uso hasta producción, no me quedo en la prueba de concepto."
+    },
+    {
+      "name": "Compromiso",
+      "description": "Aporto lo mejor de mí a cada proyecto y a mis compañeros."
+    },
+    {
+      "name": "Adaptabilidad",
+      "description": "Me adapto a las necesidades de cada cliente, hasta escribir la herramienta que su caso necesita."
+    },
+    {
+      "name": "Trabajo en equipo",
+      "description": "Trabajo en equipos empresariales con metodología ágil."
+    },
+    {
+      "name": "Visión de extremo a extremo",
+      "description": "Del análisis con negocio a la arquitectura, el código, el despliegue y la operación."
     }
   ]
 }
