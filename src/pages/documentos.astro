@@ -1,0 +1,56 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PageHeader from "@/components/v4/PageHeader.astro";
+import Footer from "@/components/v4/Footer.astro";
+import Icon from "@/components/v4/Icon.astro";
+import paletteJs from "@/scripts/palette.js?raw";
+import docsJs from "@/scripts/documentos.js?raw";
+import { cv } from "@/lib/cv";
+import { docDate, url } from "@/lib/format";
+import { getPosts, searchText } from "@/lib/posts";
+import { SECTIONS } from "@/data/site";
+import "@/styles/documentos.css";
+
+// Todos los documentos en una columna, del más reciente al más antiguo.
+const posts = (await getPosts()).reverse();
+const count = (n: number) => `${n} ${n === 1 ? "documento" : "documentos"}`;
+---
+
+<Layout title={`Documentos · ${cv.basics.name}`} description={SECTIONS.documentos}>
+  <PageHeader current="documentos" />
+
+  <main>
+    <section class="dl wrap" aria-labelledby="dl-title">
+      <header class="dl-head">
+        <h1 id="dl-title">Documentos</h1>
+        <p>{SECTIONS.documentos}</p>
+      </header>
+
+      <div class="dl-search" role="search">
+        <label class="sr" for="doc-q">Buscar documentos</label>
+        <Icon name="search" />
+        <input id="doc-q" type="search" placeholder="Buscar por título, tema o etiqueta" autocomplete="off" spellcheck="false" />
+      </div>
+      <p class="dl-count" id="doc-count" aria-live="polite">{count(posts.length)}</p>
+
+      <div class="dl-list">{
+        posts.map((post) => (
+          <article class="dl-item" data-search={searchText(post)}>
+            <div class="dl-cover"><img src={url(post.data.cover)} alt="" loading="lazy" width="633" height="318" /></div>
+            <div class="dl-body">
+              <p class="doc-meta"><span class="dl-code">{post.data.code}</span><span>{docDate(post.data.date)}</span><span>{post.data.readingTime} min de lectura</span></p>
+              <h2><a href={url(`blog/${post.id}.html`)}>{post.data.title}</a></h2>
+              <p class="doc-desc">{post.data.description}</p>
+              <div class="ptags">{post.data.tags.map((t) => <i>{t}</i>)}</div>
+            </div>
+          </article>
+        ))
+      }</div>
+      <p class="dl-empty" id="doc-empty" hidden>Ningún documento coincide con la búsqueda.</p>
+    </section>
+  </main>
+
+  <Footer />
+  <script is:inline set:html={paletteJs} />
+  <script is:inline set:html={docsJs} />
+</Layout>
